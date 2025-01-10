@@ -56,7 +56,7 @@ class AdminUserSeeder extends Seeder
             ]
         );
         // Admin kullanıcısı oluşturuldu, bilgileri loglanabilir
-        $this->command->info('Admin kullanıcısı oluşturuldu:');
+        $this->command->info('Super Admin kullanıcısı oluşturuldu:');
         $this->command->table(['Email', 'Password'], [[
             $adminEmail,
             $password
