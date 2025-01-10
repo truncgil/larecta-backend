@@ -23,5 +23,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function hasRole($roleName)
+    {
+        return $this->roles()->where('name', $roleName)->exists();
+    }
 }
 ?>
