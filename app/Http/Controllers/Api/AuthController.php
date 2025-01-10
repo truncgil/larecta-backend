@@ -105,4 +105,45 @@ class AuthController extends Controller
             'data' => $user
         ], 200);
     }
+
+    public function updateProfile(Request $request)
+    {
+        try {
+            $validator = Validator::make($request->all(), [
+                'name' => 'sometimes|string|max:255',
+                'email' => 'sometimes|string|email|max:255|unique:users,email,' . auth()->id(),
+                'password' => 'sometimes|string|min:8|confirmed',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Doğrulama hatası',
+                    'errors' => $validator->errors()
+                ], 422);
+            }
+
+            $user = auth()->user();
+            $updateData = $request->only(['name', 'email']);
+            
+            if ($request->filled('password')) {
+                $updateData['password'] = Hash::make($request->password);
+            }
+            
+            $user->update($updateData);
+            
+            return response()->json([
+                'status' => true,
+                'message' => 'Profil başarıyla güncellendi',
+                'data' => $user
+            ], 200);
+            
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Profil güncellenirken bir hata oluştu',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
 } 
