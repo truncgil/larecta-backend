@@ -94,4 +94,15 @@ class AuthController extends Controller
             'message' => 'Çıkış başarılı'
         ], 200);
     }
+
+    public function user()
+    {
+        $user = Auth::user();
+        
+        return response()->json([
+            'status' => true,
+            'message' => 'Kullanıcı bilgileri başarıyla getirildi',
+            'data' => $user
+        ], 200);
+    }
 } 
