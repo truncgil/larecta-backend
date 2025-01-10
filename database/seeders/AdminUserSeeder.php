@@ -13,31 +13,31 @@ class AdminUserSeeder extends Seeder
 {
     public function run()
     {
+        $adminEmail = env('ADMIN_EMAIL') ?? 'admin@truncgil.com';
         // Önce mevcut kayıtları temizle
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        Role::truncate();
-        Permission::truncate();
-        DB::table('role_permissions')->truncate();
-        DB::table('user_roles')->truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        User::where('role', 'super-admin')->delete();
 
-        // Super Admin rolünü oluştur
-        $adminRole = Role::create([
-            'name' => 'Super Admin',
-            'slug' => 'super-admin',
-            'description' => 'Tüm yetkilere sahip yönetici rolü'
-        ]);
+        // Super Admin rolünü oluştur veya güncelle
+        $adminRole = Role::updateOrCreate(
+            ['slug' => 'super-admin'],
+            [
+                'name' => 'Super Admin', 
+                'description' => 'Tüm yetkilere sahip yönetici rolü'
+            ]
+        );
 
         // Temel yetkileri oluştur
         $modules = ['users', 'roles', 'permissions', 'settings'];
         
         foreach ($modules as $module) {
-            Permission::create([
-                'name' => ucfirst($module) . ' Yönetimi',
-                'slug' => $module . '-management',
-                'module' => $module,
-                'actions' => ['read', 'write', 'update', 'delete']
-            ]);
+            Permission::updateOrCreate(
+                ['slug' => $module . '-management'],
+                [
+                    'name' => ucfirst($module) . ' Yönetimi',
+                    'module' => $module,
+                    'actions' => ['read', 'write', 'update', 'delete']
+                ]
+            );
         }
 
         // Tüm yetkileri admin rolüne ata
@@ -46,9 +46,9 @@ class AdminUserSeeder extends Seeder
 
         // Admin kullanıcısını oluştur veya güncelle
         $password = \Illuminate\Support\Str::random(12);
-        $admin = User::updateOrCreate(
-            ['email' => env('ADMIN_EMAIL', 'admin@example.com')],
+        $admin = User::create(
             [
+                'email' => $adminEmail,
                 'name' => 'Admin',
                 'password' => Hash::make($password),
                 'role' => 'super-admin',
@@ -58,7 +58,7 @@ class AdminUserSeeder extends Seeder
         // Admin kullanıcısı oluşturuldu, bilgileri loglanabilir
         $this->command->info('Admin kullanıcısı oluşturuldu:');
         $this->command->table(['Email', 'Password'], [[
-            $admin->email,
+            $adminEmail,
             $password
         ]]);
 
