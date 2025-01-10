@@ -14,4 +14,9 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
+
+    protected $routeMiddleware = [
+        // ... diğer middleware'ler
+        'super-admin' => \App\Http\Middleware\SuperAdminMiddleware::class,
+    ];
 }
