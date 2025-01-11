@@ -3,11 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Role;
-use App\Models\Permission;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 class AdminUserSeeder extends Seeder
 {
@@ -17,52 +16,43 @@ class AdminUserSeeder extends Seeder
         // Önce mevcut kayıtları temizle
         User::where('role', 'super-admin')->delete();
 
-        // Super Admin rolünü oluştur veya güncelle
-        $adminRole = Role::updateOrCreate(
-            ['slug' => 'super-admin'],
-            [
-                'name' => 'Super Admin', 
-                'description' => 'Tüm yetkilere sahip yönetici rolü'
-            ]
-        );
+        // Super Admin rolünü Spatie ile oluştur
+        $adminRole = Role::firstOrCreate(['name' => 'super-admin']);
 
-        // Temel yetkileri oluştur
+        // Temel yetkileri Spatie formatında oluştur
         $modules = ['users', 'roles', 'permissions', 'settings'];
+        $actions = ['list', 'create', 'edit', 'delete'];
         
         foreach ($modules as $module) {
-            Permission::updateOrCreate(
-                ['slug' => $module . '-management'],
-                [
-                    'name' => ucfirst($module) . ' Yönetimi',
-                    'module' => $module,
-                    'actions' => ['read', 'write', 'update', 'delete']
-                ]
-            );
+            foreach ($actions as $action) {
+                Permission::firstOrCreate([
+                    'name' => $action . ' ' . $module
+                ]);
+            }
         }
 
         // Tüm yetkileri admin rolüne ata
         $permissions = Permission::all();
-        $adminRole->permissions()->sync($permissions->pluck('id')->toArray());
+        $adminRole->syncPermissions($permissions);
 
-        // Admin kullanıcısını oluştur veya güncelle
+        // Admin kullanıcısını oluştur
         $password = \Illuminate\Support\Str::random(12);
-        $admin = User::create(
-            [
-                'email' => $adminEmail,
-                'name' => 'Admin',
-                'password' => Hash::make($password),
-                'role' => 'super-admin',
-                'email_verified_at' => now()
-            ]
-        );
+        $admin = User::create([
+            'email' => $adminEmail,
+            'name' => 'Admin',
+            'role' => 'super-admin',
+            'password' => Hash::make($password),
+            'email_verified_at' => now()
+        ]);
+
+        // Admin rolünü Spatie yöntemiyle ata
+        $admin->assignRole($adminRole);
+
         // Admin kullanıcısı oluşturuldu, bilgileri loglanabilir
         $this->command->info('Super Admin kullanıcısı oluşturuldu:');
         $this->command->table(['Email', 'Password'], [[
             $adminEmail,
             $password
         ]]);
-
-        // Admin rolünü kullanıcıya ata
-        $admin->roles()->sync([$adminRole->id]);
     }
 }
