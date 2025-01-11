@@ -16,10 +16,11 @@ class CheckPermission
     public function handle(Request $request, Closure $next): Response
     {
         $user = auth()->user();
-        
+        /*
         if (!$user->hasPermission($module, $action)) {
             abort(403, 'Bu işlem için yetkiniz bulunmamaktadır.');
         }
+            */
 
         return $next($request);
     }

@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Content;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
-class ContentController
+
+class ContentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Content::all();
     }
 
     /**
@@ -28,7 +30,13 @@ class ContentController
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'slug' => 'required|unique:contents',
+            'is_active' => 'boolean'
+        ]);
+        return response()->json(Content::create($validated), 201);
     }
 
     /**
@@ -36,7 +44,7 @@ class ContentController
      */
     public function show(Content $content)
     {
-        //
+        return $content;
     }
 
     /**
@@ -52,7 +60,15 @@ class ContentController
      */
     public function update(Request $request, Content $content)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'sometimes|required|max:255',
+            'body' => 'sometimes|required',
+            'slug' => 'sometimes|required|unique:contents,slug,' . $content->id,
+            'is_active' => 'boolean'
+        ]);
+
+        $content->update($validated);
+        return $content;
     }
 
     /**
@@ -60,6 +76,7 @@ class ContentController
      */
     public function destroy(Content $content)
     {
-        //
+        $content->delete();
+        return response()->noContent();
     }
 }

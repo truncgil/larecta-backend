@@ -9,10 +9,11 @@ class Kernel extends HttpKernel
     protected $middlewareGroups = [
         // ... diğer gruplar ...
         'api' => [
+            
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\SuperAdminMiddleware::class,
+         //   \App\Http\Middleware\SuperAdminMiddleware::class,
             
         ],
     ];

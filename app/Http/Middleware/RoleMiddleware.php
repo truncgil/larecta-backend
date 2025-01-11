@@ -10,7 +10,7 @@ class RoleMiddleware
 {
     public function handle(Request $request, Closure $next, $role, $guard = null)
     {
-        
+        /*
         $authGuard = app('auth')->guard($guard);
 
 
@@ -27,6 +27,7 @@ class RoleMiddleware
         if (! $authGuard->user()->hasAnyRole($roles)) {
             throw UnauthorizedException::forRoles($roles);
         }
+            */
         
         return $next($request);
     }
