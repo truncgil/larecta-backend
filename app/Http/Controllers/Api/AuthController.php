@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\Validator;
 class AuthController extends Controller
 {
     /**
-     * Yeni bir kullanıcı kaydı oluşturur.
+     * Creates a new user registration.
      * 
-     * @param Request $request Kayıt için gerekli bilgileri içeren istek nesnesi
+     * @param Request $request Request object containing registration information
      * @return \Illuminate\Http\JsonResponse
      * 
-     * @throws \Exception Kayıt işlemi sırasında oluşabilecek hatalar
+     * @throws \Exception Possible errors during registration process
      */
     public function register(Request $request)
     {
@@ -60,9 +60,9 @@ class AuthController extends Controller
     }
 
     /**
-     * Kullanıcı girişi yapar ve token oluşturur.
+     * Authenticates user and creates token.
      * 
-     * @param Request $request Giriş bilgilerini içeren istek nesnesi
+     * @param Request $request Request object containing login credentials
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request)
@@ -99,7 +99,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Kullanıcının çıkış yapmasını sağlar ve tüm tokenları siler.
+     * Logs out the user and deletes all tokens.
      * 
      * @return \Illuminate\Http\JsonResponse
      */
@@ -115,7 +115,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Giriş yapmış kullanıcının bilgilerini getirir.
+     * Retrieves authenticated user's information.
      * 
      * @return \Illuminate\Http\JsonResponse
      */
@@ -131,12 +131,12 @@ class AuthController extends Controller
     }
 
     /**
-     * Kullanıcı profilini günceller.
+     * Updates user profile information.
      * 
-     * @param Request $request Güncellenecek profil bilgilerini içeren istek nesnesi
+     * @param Request $request Request object containing profile update information
      * @return \Illuminate\Http\JsonResponse
      * 
-     * @throws \Exception Güncelleme işlemi sırasında oluşabilecek hatalar
+     * @throws \Exception Possible errors during profile update process
      */
     public function updateProfile(Request $request)
     {
