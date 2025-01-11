@@ -4,10 +4,10 @@ use Knuckles\Scribe\Extracting\Strategies;
 
 return [
     // The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
-    'title' => null,
+    'title' => 'Larecta CMS API Documentation',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
-    'description' => '',
+    'description' => 'Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.',
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
@@ -96,18 +96,18 @@ return [
     // How is your API authenticated? This information will be used in the displayed docs, generated examples and response calls.
     'auth' => [
         // Set this to true if ANY endpoints in your API use authentication.
-        'enabled' => false,
+        'enabled' => true,
 
         // Set this to true if your API should be authenticated by default. If so, you must also set `enabled` (above) to true.
         // You can then use @unauthenticated or @authenticated on individual endpoints to change their status from the default.
-        'default' => false,
+        'default' => true,
 
         // Where is the auth value meant to be sent in a request?
         // Options: query, body, basic, bearer, header (for custom header)
         'in' => 'bearer',
 
         // The name of the auth parameter (e.g. token, key, apiKey) or header (e.g. Authorization, Api-Key).
-        'name' => 'key',
+        'name' => 'Authorization',
 
         // The value of the parameter to be used by Scribe to authenticate response calls.
         // This will NOT be included in the generated documentation. If empty, Scribe will use a random value.
@@ -177,7 +177,7 @@ INTRO
     // For example, if your logo is in public/img:
     // - 'logo' => '../img/logo.png' // for `static` type (output folder is public/docs)
     // - 'logo' => 'img/logo.png' // for `laravel` type
-    'logo' => false,
+    'logo' => 'logo.svg',
 
     // Customize the "Last updated" value displayed in the docs by specifying tokens and formats.
     // Examples:
