@@ -79,17 +79,17 @@ paths:
                 name:
                   type: string
                   description: "User's full name. Maximum: 255 characters."
-                  example: mollitia
+                  example: ea
                   nullable: false
                 email:
                   type: string
                   description: "User's email address. Maximum: 255 characters, must be unique."
-                  example: huels.cheyenne@example.net
+                  example: morris.beatty@example.net
                   nullable: false
                 password:
                   type: string
                   description: "User's password. Minimum: 6 characters."
-                  example: 'a!nmZ*'
+                  example: 'Z~+i9!%{hx)p}g`'
                   nullable: false
               required:
                 - name
@@ -114,12 +114,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: josie.borer@example.net
+                  example: cgreen@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: cumque
                   nullable: false
               required:
                 - email
@@ -181,12 +181,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: natus
+                  example: a
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptatem ab voluptatum animi sint necessitatibus.'
+                  example: 'Deleniti adipisci veritatis consectetur numquam qui voluptates non.'
                   nullable: true
                 permissions:
                   type: array
@@ -240,7 +240,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Inventore dolore occaecati ipsam praesentium explicabo et est.'
+                  example: 'Quibusdam tempora eius quibusdam earum.'
                   nullable: true
                 permissions:
                   type: array
@@ -304,12 +304,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: quo
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Et quidem aperiam aut temporibus vel iure.'
+                  example: 'In iste molestiae vero assumenda tempore amet.'
                   nullable: true
               required:
                 - name
@@ -357,7 +357,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Quaerat dolores qui omnis est unde et ut quam.'
+                  example: 'Veritatis accusamus est sed.'
                   nullable: true
     delete:
       summary: ''
@@ -466,27 +466,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nozrsmitertwjqcbru
+                  example: zftjxcrxbjxvfhmldm
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: eum
+                  example: accusantium
                   nullable: false
                 slug:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: mollitia
                   nullable: false
                 type:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: in
                   nullable: true
                 status:
                   type: string
                   description: ''
-                  example: archived
+                  example: published
                   nullable: false
                   enum:
                     - draft
@@ -495,12 +495,12 @@ paths:
                 content:
                   type: string
                   description: ''
-                  example: dicta
+                  example: repellendus
                   nullable: true
                 meta:
                   type: string
                   description: 'Must be a valid JSON string.'
-                  example: '["maiores","similique"]'
+                  example: '["aliquam","ut"]'
                   nullable: true
               required:
                 - title
@@ -546,12 +546,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cxcrinokzhzqmycd
+                  example: lzvdrbliwlpdctmzcr
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: aliquid
+                  example: voluptatem
                   nullable: false
                 slug:
                   type: string
@@ -561,7 +561,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: false
               required:
                 - title
@@ -622,12 +622,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vfewjrohqivu
+                  example: zbj
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Fugiat blanditiis vitae iste dicta dolorem.'
+                  example: 'Voluptas non quisquam sunt laborum molestiae.'
                   nullable: true
               required:
                 - name
@@ -670,12 +670,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dmfefwos
+                  example: mdyloyyulbzql
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Vel dolorem odit ut velit dolorem asperiores quisquam.'
+                  example: 'Placeat eos tempore quis modi eos.'
                   nullable: true
               required:
                 - name
@@ -692,7 +692,7 @@ paths:
         in: path
         name: type_id
         description: 'The ID of the type.'
-        example: 13
+        example: 2
         required: true
         schema:
           type: integer
@@ -735,12 +735,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gtbbafh
+                  example: bacesadtcgsjtgence
                   nullable: false
                 field_type:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xlahpdbecqbofmrmarwzpgk
+                  example: wuuej
                   nullable: false
               required:
                 - name
@@ -750,7 +750,7 @@ paths:
         in: path
         name: type
         description: 'The type.'
-        example: 11
+        example: 2
         required: true
         schema:
           type: integer
@@ -793,12 +793,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: sarsuwnz
+                  example: jpvjabsrmsafjlxgkq
                   nullable: false
                 field_type:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eoxe
+                  example: kfmltajiutnpchjxtwkb
                   nullable: false
               required:
                 - name
@@ -816,7 +816,7 @@ paths:
         in: path
         name: type
         description: 'The type.'
-        example: 11
+        example: 2
         required: true
         schema:
           type: integer
@@ -824,7 +824,7 @@ paths:
         in: path
         name: meta
         description: 'The meta.'
-        example: praesentium
+        example: autem
         required: true
         schema:
           type: string

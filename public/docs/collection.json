@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Larecta CMS API Documentation",
-        "_postman_id": "a449353d-506b-428d-8555-f54858a13937",
+        "_postman_id": "e2192249-c45f-498e-bdbb-5c0e31841ecf",
         "description": "Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"mollitia\",\"email\":\"huels.cheyenne@example.net\",\"password\":\"a!nmZ*\"}"
+                            "raw": "{\"name\":\"ea\",\"email\":\"morris.beatty@example.net\",\"password\":\"Z~+i9!%{hx)p}g`\"}"
                         },
                         "description": ""
                     },
@@ -107,7 +107,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"josie.borer@example.net\",\"password\":\"aut\"}"
+                            "raw": "{\"email\":\"cgreen@example.com\",\"password\":\"cumque\"}"
                         },
                         "description": ""
                     },
@@ -230,7 +230,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"natus\",\"description\":\"Voluptatem ab voluptatum animi sint necessitatibus.\"}"
+                            "raw": "{\"name\":\"a\",\"description\":\"Deleniti adipisci veritatis consectetur numquam qui voluptates non.\"}"
                         },
                         "description": ""
                     },
@@ -319,7 +319,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Inventore dolore occaecati ipsam praesentium explicabo et est.\"}"
+                            "raw": "{\"description\":\"Quibusdam tempora eius quibusdam earum.\"}"
                         },
                         "description": ""
                     },
@@ -425,7 +425,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"voluptatem\",\"description\":\"Et quidem aperiam aut temporibus vel iure.\"}"
+                            "raw": "{\"name\":\"quo\",\"description\":\"In iste molestiae vero assumenda tempore amet.\"}"
                         },
                         "description": ""
                     },
@@ -514,7 +514,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Quaerat dolores qui omnis est unde et ut quam.\"}"
+                            "raw": "{\"description\":\"Veritatis accusamus est sed.\"}"
                         },
                         "description": ""
                     },
@@ -718,7 +718,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"nozrsmitertwjqcbru\",\"body\":\"eum\",\"slug\":\"ducimus\",\"type\":\"voluptas\",\"status\":\"archived\",\"content\":\"dicta\",\"meta\":\"[\\\"maiores\\\",\\\"similique\\\"]\"}"
+                            "raw": "{\"title\":\"zftjxcrxbjxvfhmldm\",\"body\":\"accusantium\",\"slug\":\"mollitia\",\"type\":\"in\",\"status\":\"published\",\"content\":\"repellendus\",\"meta\":\"[\\\"aliquam\\\",\\\"ut\\\"]\"}"
                         },
                         "description": ""
                     },
@@ -807,7 +807,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"cxcrinokzhzqmycd\",\"body\":\"aliquid\",\"is_active\":true}"
+                            "raw": "{\"title\":\"lzvdrbliwlpdctmzcr\",\"body\":\"voluptatem\",\"is_active\":false}"
                         },
                         "description": ""
                     },
@@ -913,7 +913,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vfewjrohqivu\",\"description\":\"Fugiat blanditiis vitae iste dicta dolorem.\"}"
+                            "raw": "{\"name\":\"zbj\",\"description\":\"Voluptas non quisquam sunt laborum molestiae.\"}"
                         },
                         "description": ""
                     },
@@ -931,7 +931,7 @@
                                 {
                                     "id": "type_id",
                                     "key": "type_id",
-                                    "value": "13",
+                                    "value": "2",
                                     "description": "The ID of the type."
                                 }
                             ]
@@ -984,7 +984,7 @@
                                 {
                                     "id": "type_id",
                                     "key": "type_id",
-                                    "value": "12",
+                                    "value": "2",
                                     "description": "The ID of the type."
                                 }
                             ]
@@ -1002,7 +1002,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"dmfefwos\",\"description\":\"Vel dolorem odit ut velit dolorem asperiores quisquam.\"}"
+                            "raw": "{\"name\":\"mdyloyyulbzql\",\"description\":\"Placeat eos tempore quis modi eos.\"}"
                         },
                         "description": ""
                     },
@@ -1020,7 +1020,7 @@
                                 {
                                     "id": "type_id",
                                     "key": "type_id",
-                                    "value": "16",
+                                    "value": "2",
                                     "description": "The ID of the type."
                                 }
                             ]
@@ -1053,7 +1053,7 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "11",
+                                    "value": "2",
                                     "description": "The type."
                                 }
                             ]
@@ -1106,7 +1106,7 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "14",
+                                    "value": "2",
                                     "description": "The type."
                                 }
                             ]
@@ -1124,7 +1124,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gtbbafh\",\"field_type\":\"xlahpdbecqbofmrmarwzpgk\"}"
+                            "raw": "{\"name\":\"bacesadtcgsjtgence\",\"field_type\":\"wuuej\"}"
                         },
                         "description": ""
                     },
@@ -1142,13 +1142,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "11",
+                                    "value": "2",
                                     "description": "The type."
                                 },
                                 {
                                     "id": "meta",
                                     "key": "meta",
-                                    "value": "praesentium",
+                                    "value": "autem",
                                     "description": "The meta."
                                 }
                             ]
@@ -1201,13 +1201,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "4",
+                                    "value": "2",
                                     "description": "The type."
                                 },
                                 {
                                     "id": "meta",
                                     "key": "meta",
-                                    "value": "quidem",
+                                    "value": "omnis",
                                     "description": "The meta."
                                 }
                             ]
@@ -1225,7 +1225,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"sarsuwnz\",\"field_type\":\"eoxe\"}"
+                            "raw": "{\"name\":\"jpvjabsrmsafjlxgkq\",\"field_type\":\"kfmltajiutnpchjxtwkb\"}"
                         },
                         "description": ""
                     },
@@ -1243,13 +1243,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "14",
+                                    "value": "2",
                                     "description": "The type."
                                 },
                                 {
                                     "id": "meta",
                                     "key": "meta",
-                                    "value": "quis",
+                                    "value": "consectetur",
                                     "description": "The meta."
                                 }
                             ]
