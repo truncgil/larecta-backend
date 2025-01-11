@@ -23,7 +23,7 @@ Route::prefix('auth')->group(function () {
 // Yetkilendirme ve Rol Yönetimi Rotaları
 Route::middleware(['auth:sanctum'])->group(function () {
     // Roller için CRUD
-    Route::prefix('roles')->middleware('role:Super Admin')->group(function () {
+    Route::prefix('roles')->middleware(\App\Http\Middleware\RoleMiddleware::class .':super-admin')->group(function () {
         Route::get('/', [RoleController::class, 'index']);
         Route::post('/', [RoleController::class, 'store']);
         Route::get('/{role}', [RoleController::class, 'show']);
@@ -44,7 +44,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     // Kullanıcı-Rol Yönetimi
-    Route::prefix('users')->middleware('role:Super Admin')->group(function () {
+    Route::prefix('users')->middleware(\App\Http\Middleware\RoleMiddleware::class .':Super Admin')->group(function () {
         Route::get('/', [UserRoleController::class, 'index']);
         Route::get('/{user}', [UserRoleController::class, 'show']);
         Route::post('/{user}/roles', [UserRoleController::class, 'syncRoles']);
