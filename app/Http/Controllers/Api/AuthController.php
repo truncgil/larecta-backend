@@ -117,8 +117,25 @@ class AuthController extends Controller
         ], 200);
     }
 
+   
     /**
-     * Retrieves authenticated user's information.
+     * Get user information.
+     * 
+     * @group Authentication
+     * @authenticated
+     * 
+     * @response 200 {
+     *   "status": true,
+     *   "message": "User information retrieved successfully",
+     *   "data": {
+     *     "id": 1,
+     *     "name": "John Doe",
+     *     "email": "john@example.com",
+     *     "email_verified_at": "2024-01-15T10:00:00.000000Z",
+     *     "created_at": "2024-01-15T10:00:00.000000Z",
+     *     "updated_at": "2024-01-15T10:00:00.000000Z"
+     *   }
+     * }
      * 
      * @return \Illuminate\Http\JsonResponse
      */
@@ -137,6 +154,7 @@ class AuthController extends Controller
      * Updates user profile information.
      * 
      * @param Request $request Request object containing profile update information
+     * @authenticated
      * @return \Illuminate\Http\JsonResponse
      * 
      * @throws \Exception Possible errors during profile update process

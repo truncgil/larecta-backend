@@ -34,7 +34,10 @@ class ContentController extends Controller
             'title' => 'required|max:255',
             'body' => 'required',
             'slug' => 'required|unique:contents',
-            'is_active' => 'boolean'
+            'type' => 'nullable|string',
+            'status' => 'required|in:draft,published,archived',
+            'content' => 'nullable|string',
+            'meta' => 'nullable|json'
         ]);
         return response()->json(Content::create($validated), 201);
     }
