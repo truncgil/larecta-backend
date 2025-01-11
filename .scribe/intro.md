@@ -1,6 +1,6 @@
 # Introduction
 
-
+Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.
 
 <aside>
     <strong>Base URL</strong>: <code>http://localhost:8000</code>

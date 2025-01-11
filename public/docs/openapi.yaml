@@ -1,12 +1,65 @@
 openapi: 3.0.3
 info:
-  title: Laravel
-  description: ''
+  title: 'Larecta CMS API Documentation'
+  description: 'Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.'
   version: 1.0.0
 servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/auth/user:
+    get:
+      summary: 'Get user information.'
+      operationId: getUserInformation
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'User information retrieved successfully'
+                  data:
+                    id: 1
+                    name: 'John Doe'
+                    email: john@example.com
+                    email_verified_at: '2024-01-15T10:00:00.000000Z'
+                    created_at: '2024-01-15T10:00:00.000000Z'
+                    updated_at: '2024-01-15T10:00:00.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'User information retrieved successfully'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'John Doe'
+                      email:
+                        type: string
+                        example: john@example.com
+                      email_verified_at:
+                        type: string
+                        example: '2024-01-15T10:00:00.000000Z'
+                      created_at:
+                        type: string
+                        example: '2024-01-15T10:00:00.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-01-15T10:00:00.000000Z'
+      tags:
+        - Authentication
   /api/auth/register:
     post:
       summary: 'Creates a new user registration.'
@@ -26,23 +79,22 @@ paths:
                 name:
                   type: string
                   description: "User's full name. Maximum: 255 characters."
-                  example: porro
+                  example: beatae
                   nullable: false
                 email:
                   type: string
                   description: "User's email address. Maximum: 255 characters, must be unique."
-                  example: ocartwright@example.org
+                  example: liliane92@example.com
                   nullable: false
                 password:
                   type: string
                   description: "User's password. Minimum: 6 characters."
-                  example: 'bn5W/}<#_D}wP:f'
+                  example: "(92Q=6'{r+W]JU"
                   nullable: false
               required:
                 - name
                 - email
                 - password
-      security: []
   /api/auth/login:
     post:
       summary: 'Authenticates user and creates token.'
@@ -62,17 +114,16 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: feeney.terrell@example.net
+                  example: maye02@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: eos
+                  example: culpa
                   nullable: false
               required:
                 - email
                 - password
-      security: []
   /api/auth/logout:
     post:
       summary: 'Logs out the user and deletes all tokens.'
@@ -82,11 +133,19 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
-  /api/auth/user:
+  /api/auth/profile:
+    put:
+      summary: 'Updates user profile information.'
+      operationId: updatesUserProfileInformation
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+  /api/roles:
     get:
-      summary: "Retrieves authenticated user's information."
-      operationId: retrievesAuthenticatedUsersInformation
+      summary: ''
+      operationId: getApiRoles
       description: ''
       parameters: []
       responses:
@@ -104,27 +163,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
-  /api/auth/profile:
-    put:
-      summary: 'Updates user profile information.'
-      operationId: updatesUserProfileInformation
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-  /api/roles:
-    get:
-      summary: ''
-      operationId: getApiRoles
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
     post:
       summary: ''
       operationId: postApiRoles
@@ -143,12 +181,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: laudantium
+                  example: ullam
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Quas laboriosam facilis neque fuga praesentium qui.'
+                  example: 'Error id sit laudantium dolorem est consequatur veniam neque.'
                   nullable: true
                 permissions:
                   type: array
@@ -158,17 +196,27 @@ paths:
                     type: string
               required:
                 - name
-      security: []
   '/api/roles/{role_id}':
     get:
       summary: ''
       operationId: getApiRolesRole_id
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     put:
       summary: ''
       operationId: putApiRolesRole_id
@@ -192,7 +240,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Numquam voluptatem sed reiciendis quo in ullam architecto dolore.'
+                  example: 'Odit nihil qui debitis voluptas labore debitis.'
                   nullable: true
                 permissions:
                   type: array
@@ -200,7 +248,6 @@ paths:
                   example: null
                   items:
                     type: string
-      security: []
     delete:
       summary: ''
       operationId: deleteApiRolesRole_id
@@ -209,7 +256,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -240,7 +286,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     post:
       summary: ''
       operationId: postApiPermissions
@@ -259,16 +304,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: est
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Ut qui eaque veritatis reprehenderit magnam ea.'
+                  example: 'Quo ea est libero accusantium dicta animi voluptatem distinctio.'
                   nullable: true
               required:
                 - name
-      security: []
   '/api/permissions/{permission_id}':
     get:
       summary: ''
@@ -290,7 +334,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     put:
       summary: ''
       operationId: putApiPermissionsPermission_id
@@ -314,9 +357,8 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Rerum magni laudantium officia aut reiciendis.'
+                  example: 'Similique nihil nostrum eius temporibus eveniet et officiis.'
                   nullable: true
-      security: []
     delete:
       summary: ''
       operationId: deleteApiPermissionsPermission_id
@@ -325,7 +367,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -341,20 +382,42 @@ paths:
       operationId: getApiUsers
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
   '/api/users/{user_id}':
     get:
       summary: ''
       operationId: getApiUsersUser_id
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -385,7 +448,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     post:
       summary: 'Store a newly created resource in storage.'
       operationId: storeANewlyCreatedResourceInStorage
@@ -404,28 +466,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: aoygxdgdnkjchb
+                  example: j
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: laborum
+                  example: sit
                   nullable: false
                 slug:
                   type: string
                   description: ''
-                  example: quia
+                  example: quis
                   nullable: false
-                is_active:
-                  type: boolean
+                type:
+                  type: string
                   description: ''
-                  example: false
+                  example: sequi
+                  nullable: true
+                status:
+                  type: string
+                  description: ''
+                  example: published
                   nullable: false
+                  enum:
+                    - draft
+                    - published
+                    - archived
+                content:
+                  type: string
+                  description: ''
+                  example: beatae
+                  nullable: true
+                meta:
+                  type: string
+                  description: 'Must be a valid JSON string.'
+                  example: '["excepturi","magnam"]'
+                  nullable: true
               required:
                 - title
                 - body
                 - slug
-      security: []
+                - status
   '/api/admin/contents/{content_id}':
     get:
       summary: 'Display the specified resource.'
@@ -447,7 +528,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -466,12 +546,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: arbjeiczdbsnnq
+                  example: qyojocgjlxhejttaqvtazjfd
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: nesciunt
+                  example: voluptate
                   nullable: false
                 slug:
                   type: string
@@ -481,12 +561,11 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: false
               required:
                 - title
                 - body
-      security: []
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -495,17 +574,28 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: content_id
         description: 'The ID of the content.'
-        example: 1
+        example: 2
         required: true
         schema:
           type: integer
 tags:
   -
+    name: Authentication
+    description: ''
+  -
     name: Endpoints
     description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

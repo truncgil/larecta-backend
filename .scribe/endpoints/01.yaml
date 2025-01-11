@@ -1,0 +1,55 @@
+name: Authentication
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/auth/user
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get user information.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "status": true,
+            "message": "User information retrieved successfully",
+            "data": {
+              "id": 1,
+              "name": "John Doe",
+              "email": "john@example.com",
+              "email_verified_at": "2024-01-15T10:00:00.000000Z",
+              "created_at": "2024-01-15T10:00:00.000000Z",
+              "updated_at": "2024-01-15T10:00:00.000000Z"
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer aPf36Zh8d6DcVk5abv1gEe4'
+    controller: null
+    method: null
+    route: null
+    custom: []

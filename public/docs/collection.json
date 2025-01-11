@@ -9,12 +9,50 @@
         }
     ],
     "info": {
-        "name": "Laravel",
-        "_postman_id": "85409c66-a82f-486e-bb19-a62ef8a5d482",
-        "description": "",
+        "name": "Larecta CMS API Documentation",
+        "_postman_id": "b448068d-2bd4-43fc-a163-5e64ec97b35e",
+        "description": "Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Authentication",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get user information.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"status\": true,\n  \"message\": \"User information retrieved successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"email_verified_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"created_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"updated_at\": \"2024-01-15T10:00:00.000000Z\"\n  }\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Endpoints",
             "description": "",
@@ -41,12 +79,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"porro\",\"email\":\"ocartwright@example.org\",\"password\":\"bn5W\\\/}<#_D}wP:f\"}"
+                            "raw": "{\"name\":\"beatae\",\"email\":\"liliane92@example.com\",\"password\":\"(92Q=6'{r+W]JU\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -72,12 +107,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"feeney.terrell@example.net\",\"password\":\"eos\"}"
+                            "raw": "{\"email\":\"maye02@example.com\",\"password\":\"culpa\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -102,60 +134,9 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
-                },
-                {
-                    "name": "Retrieves authenticated user's information.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
                 },
                 {
                     "name": "Updates user profile information.",
@@ -178,10 +159,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -206,12 +184,29 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "POST api\/roles",
@@ -235,12 +230,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"laudantium\",\"description\":\"Quas laboriosam facilis neque fuga praesentium qui.\"}"
+                            "raw": "{\"name\":\"ullam\",\"description\":\"Error id sit laudantium dolorem est consequatur veniam neque.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -273,12 +265,29 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "PUT api\/roles\/{role_id}",
@@ -310,12 +319,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Numquam voluptatem sed reiciendis quo in ullam architecto dolore.\"}"
+                            "raw": "{\"description\":\"Odit nihil qui debitis voluptas labore debitis.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -348,10 +354,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -376,10 +379,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -425,12 +425,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"aliquam\",\"description\":\"Ut qui eaque veritatis reprehenderit magnam ea.\"}"
+                            "raw": "{\"name\":\"est\",\"description\":\"Quo ea est libero accusantium dicta animi voluptatem distinctio.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -463,10 +460,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -520,12 +514,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Rerum magni laudantium officia aut reiciendis.\"}"
+                            "raw": "{\"description\":\"Similique nihil nostrum eius temporibus eveniet et officiis.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -558,10 +549,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -586,12 +574,29 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "GET api\/users\/{user_id}",
@@ -622,12 +627,29 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "Display a listing of the resource.",
@@ -650,10 +672,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -699,12 +718,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"aoygxdgdnkjchb\",\"body\":\"laborum\",\"slug\":\"quia\",\"is_active\":false}"
+                            "raw": "{\"title\":\"j\",\"body\":\"sit\",\"slug\":\"quis\",\"type\":\"sequi\",\"status\":\"published\",\"content\":\"beatae\",\"meta\":\"[\\\"excepturi\\\",\\\"magnam\\\"]\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -720,7 +736,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "1",
+                                    "value": "2",
                                     "description": "The ID of the content."
                                 }
                             ]
@@ -737,10 +753,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -776,7 +789,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "10",
+                                    "value": "2",
                                     "description": "The ID of the content."
                                 }
                             ]
@@ -794,12 +807,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"arbjeiczdbsnnq\",\"body\":\"nesciunt\",\"is_active\":true}"
+                            "raw": "{\"title\":\"qyojocgjlxhejttaqvtazjfd\",\"body\":\"voluptate\",\"is_active\":false}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -815,7 +825,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "7",
+                                    "value": "2",
                                     "description": "The ID of the content."
                                 }
                             ]
@@ -832,10 +842,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
@@ -843,6 +850,12 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "Authorization",
+                "type": "string"
+            }
+        ]
     }
 }
