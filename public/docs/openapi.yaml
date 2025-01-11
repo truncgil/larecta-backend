@@ -9,8 +9,8 @@ servers:
 paths:
   /api/auth/register:
     post:
-      summary: ''
-      operationId: postApiAuthRegister
+      summary: 'Yeni bir kullanıcı kaydı oluşturur.'
+      operationId: yeniBirKullancKaydOluturur
       description: ''
       parameters: []
       responses: {  }
@@ -19,8 +19,8 @@ paths:
       security: []
   /api/auth/login:
     post:
-      summary: ''
-      operationId: postApiAuthLogin
+      summary: 'Kullanıcı girişi yapar ve token oluşturur.'
+      operationId: kullancGiriiYaparVeTokenOluturur
       description: ''
       parameters: []
       responses: {  }
@@ -36,12 +36,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: delphia59@example.org
+                  example: ike78@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: vero
+                  example: quo
                   nullable: false
               required:
                 - email
@@ -49,8 +49,8 @@ paths:
       security: []
   /api/auth/logout:
     post:
-      summary: ''
-      operationId: postApiAuthLogout
+      summary: 'Kullanıcının çıkış yapmasını sağlar ve tüm tokenları siler.'
+      operationId: kullancnnkYapmasnSalarVeTmTokenlarSiler
       description: ''
       parameters: []
       responses: {  }
@@ -59,8 +59,8 @@ paths:
       security: []
   /api/auth/user:
     get:
-      summary: ''
-      operationId: getApiAuthUser
+      summary: 'Giriş yapmış kullanıcının bilgilerini getirir.'
+      operationId: giriYapmKullancnnBilgileriniGetirir
       description: ''
       parameters: []
       responses:
@@ -81,8 +81,8 @@ paths:
       security: []
   /api/auth/profile:
     put:
-      summary: ''
-      operationId: putApiAuthProfile
+      summary: 'Kullanıcı profilini günceller.'
+      operationId: kullancProfiliniGnceller
       description: ''
       parameters: []
       responses: {  }
@@ -117,12 +117,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: ratione
+                  example: ut
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Omnis vel non quae quasi veritatis et.'
+                  example: 'Illum id impedit enim nihil doloremque.'
                   nullable: true
                 permissions:
                   type: array
@@ -166,7 +166,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Labore ipsa ex excepturi possimus reprehenderit sint.'
+                  example: 'Vel enim rerum delectus.'
                   nullable: true
                 permissions:
                   type: array
@@ -233,12 +233,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: est
+                  example: et
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Eos sit suscipit non quidem tempore vitae.'
+                  example: 'Earum quia sint amet vel iure excepturi aut.'
                   nullable: true
               required:
                 - name
@@ -288,7 +288,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Earum deserunt veritatis pariatur omnis ratione.'
+                  example: 'At molestiae et quasi ut molestias.'
                   nullable: true
       security: []
     delete:
@@ -334,7 +334,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 1
+        example: 2
         required: true
         schema:
           type: integer
@@ -378,22 +378,22 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: sjuk
+                  example: guwexk
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: quia
+                  example: nisi
                   nullable: false
                 slug:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: esse
                   nullable: false
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: false
               required:
                 - title
@@ -440,12 +440,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mvi
+                  example: fjwnutqacdjelymgwsm
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: architecto
+                  example: eligendi
                   nullable: false
                 slug:
                   type: string
@@ -455,7 +455,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: false
               required:
                 - title
@@ -475,7 +475,7 @@ paths:
         in: path
         name: content_id
         description: 'The ID of the content.'
-        example: 8
+        example: 19
         required: true
         schema:
           type: integer

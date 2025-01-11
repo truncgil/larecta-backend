@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "f889a424-4305-4d29-958e-4996a2e31a47",
+        "_postman_id": "939efad9-d582-4a21-bbcc-05a7f5b64a32",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,7 +20,7 @@
             "description": "",
             "item": [
                 {
-                    "name": "POST api\/auth\/register",
+                    "name": "Yeni bir kullan\u0131c\u0131 kayd\u0131 olu\u015fturur.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -48,7 +48,7 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/auth\/login",
+                    "name": "Kullan\u0131c\u0131 giri\u015fi yapar ve token olu\u015fturur.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -69,7 +69,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"delphia59@example.org\",\"password\":\"vero\"}"
+                            "raw": "{\"email\":\"ike78@example.com\",\"password\":\"quo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/auth\/logout",
+                    "name": "Kullan\u0131c\u0131n\u0131n \u00e7\u0131k\u0131\u015f yapmas\u0131n\u0131 sa\u011flar ve t\u00fcm tokenlar\u0131 siler.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -107,7 +107,7 @@
                     "response": []
                 },
                 {
-                    "name": "GET api\/auth\/user",
+                    "name": "Giri\u015f yapm\u0131\u015f kullan\u0131c\u0131n\u0131n bilgilerini getirir.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -155,7 +155,7 @@
                     ]
                 },
                 {
-                    "name": "PUT api\/auth\/profile",
+                    "name": "Kullan\u0131c\u0131 profilini g\u00fcnceller.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -232,7 +232,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ratione\",\"description\":\"Omnis vel non quae quasi veritatis et.\"}"
+                            "raw": "{\"name\":\"ut\",\"description\":\"Illum id impedit enim nihil doloremque.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -307,7 +307,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Labore ipsa ex excepturi possimus reprehenderit sint.\"}"
+                            "raw": "{\"description\":\"Vel enim rerum delectus.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -422,7 +422,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"est\",\"description\":\"Eos sit suscipit non quidem tempore vitae.\"}"
+                            "raw": "{\"name\":\"et\",\"description\":\"Earum quia sint amet vel iure excepturi aut.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -517,7 +517,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Earum deserunt veritatis pariatur omnis ratione.\"}"
+                            "raw": "{\"description\":\"At molestiae et quasi ut molestias.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -602,7 +602,7 @@
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "1",
+                                    "value": "2",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -696,7 +696,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"sjuk\",\"body\":\"quia\",\"slug\":\"voluptas\",\"is_active\":true}"
+                            "raw": "{\"title\":\"guwexk\",\"body\":\"nisi\",\"slug\":\"esse\",\"is_active\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -717,7 +717,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "8",
+                                    "value": "19",
                                     "description": "The ID of the content."
                                 }
                             ]
@@ -773,7 +773,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "8",
+                                    "value": "5",
                                     "description": "The ID of the content."
                                 }
                             ]
@@ -791,7 +791,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"mvi\",\"body\":\"architecto\",\"is_active\":true}"
+                            "raw": "{\"title\":\"fjwnutqacdjelymgwsm\",\"body\":\"eligendi\",\"is_active\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -812,7 +812,7 @@
                                 {
                                     "id": "content_id",
                                     "key": "content_id",
-                                    "value": "14",
+                                    "value": "9",
                                     "description": "The ID of the content."
                                 }
                             ]
