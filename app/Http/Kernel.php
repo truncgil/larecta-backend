@@ -13,19 +13,15 @@ class Kernel extends HttpKernel
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-         //   \App\Http\Middleware\SuperAdminMiddleware::class,
             
         ],
+        
     ];
 
     protected $middlewareAliases = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
-        // Spatie middleware tanımlamaları
-       // 'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-        'role' => \App\Http\Middleware\RoleMiddleware::class,
-
+        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,        
         'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
     ];

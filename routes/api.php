@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\UserRoleController;
 use App\Http\Controllers\Api\ContentController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\Api\TypeMetaController;
+use App\Http\Middleware\RoleMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
@@ -22,10 +23,13 @@ Route::prefix('auth')->group(function () {
     });
 }); 
 
+
 // Yetkilendirme ve Rol Yönetimi Rotaları
 Route::middleware(['auth:sanctum'])->group(function () {
+    $superAdmin = RoleMiddleware::class.':super-admin';
+
     // Roller için CRUD
-    Route::prefix('roles')->middleware(\App\Http\Middleware\RoleMiddleware::class .':super-admin')->group(function () {
+    Route::prefix('roles')->middleware($superAdmin)->group(function () {
         Route::get('/', [RoleController::class, 'index']);
         Route::post('/', [RoleController::class, 'store']);
         Route::get('/{role}', [RoleController::class, 'show']);
@@ -37,7 +41,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     // İzinler için CRUD
-    Route::prefix('permissions')->middleware(\App\Http\Middleware\RoleMiddleware::class .':super-admin')->group(function () {
+    Route::prefix('permissions')->middleware($superAdmin)->group(function () {
         Route::get('/', [PermissionController::class, 'index']);
         Route::post('/', [PermissionController::class, 'store']);
         Route::get('/{permission}', [PermissionController::class, 'show']);
@@ -46,7 +50,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     // Kullanıcı-Rol Yönetimi
-    Route::prefix('users')->middleware(\App\Http\Middleware\RoleMiddleware::class .':Super Admin')->group(function () {
+    Route::prefix('users')->middleware($superAdmin)->group(function () {
         Route::get('/', [UserRoleController::class, 'index']);
         Route::get('/{user}', [UserRoleController::class, 'show']);
         Route::post('/{user}/roles', [UserRoleController::class, 'syncRoles']);
