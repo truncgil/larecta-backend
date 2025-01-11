@@ -15,6 +15,9 @@ class AuthController extends Controller
      * Creates a new user registration.
      * 
      * @param Request $request Request object containing registration information
+    * @bodyParam name string required User's full name. Maximum: 255 characters.
+    * @bodyParam email string required User's email address. Maximum: 255 characters, must be unique.
+    * @bodyParam password string required User's password. Minimum: 6 characters.
      * @return \Illuminate\Http\JsonResponse
      * 
      * @throws \Exception Possible errors during registration process
@@ -31,7 +34,7 @@ class AuthController extends Controller
             if ($validator->fails()) {
                 return response()->json([
                     'status' => false,
-                    'message' => 'Doğrulama hatası',
+                    'message' => 'Validation error',
                     'errors' => $validator->errors()
                 ], 422);
             }
@@ -46,14 +49,14 @@ class AuthController extends Controller
 
             return response()->json([
                 'status' => true,
-                'message' => 'Kullanıcı başarıyla oluşturuldu',
+                'message' => 'User created successfully',
                 'data' => $user,
                 'token' => $token
             ], 201);
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Bir hata oluştu',
+                'message' => 'An error occurred',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -75,7 +78,7 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'status' => false,
-                'message' => 'Doğrulama hatası',
+                'message' => 'Validation error',
                 'errors' => $validator->errors()
             ], 422);
         }
@@ -83,7 +86,7 @@ class AuthController extends Controller
         if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
                 'status' => false,
-                'message' => 'Email veya şifre hatalı'
+                'message' => 'Invalid email or password'
             ], 401);
         }
 
@@ -92,7 +95,7 @@ class AuthController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => 'Giriş başarılı',
+            'message' => 'Login successful',
             'data' => $user,
             'token' => $token
         ], 200);
@@ -110,7 +113,7 @@ class AuthController extends Controller
         
         return response()->json([
             'status' => true,
-            'message' => 'Çıkış başarılı'
+            'message' => 'Logout successful'
         ], 200);
     }
 
@@ -125,7 +128,7 @@ class AuthController extends Controller
         
         return response()->json([
             'status' => true,
-            'message' => 'Kullanıcı bilgileri başarıyla getirildi',
+            'message' => 'User information retrieved successfully',
             'data' => $user
         ], 200);
     }
@@ -150,7 +153,7 @@ class AuthController extends Controller
             if ($validator->fails()) {
                 return response()->json([
                     'status' => false,
-                    'message' => 'Doğrulama hatası',
+                    'message' => 'Validation error',
                     'errors' => $validator->errors()
                 ], 422);
             }
@@ -166,14 +169,14 @@ class AuthController extends Controller
             
             return response()->json([
                 'status' => true,
-                'message' => 'Profil başarıyla güncellendi',
+                'message' => 'Profile updated successfully',
                 'data' => $user
             ], 200);
             
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Profil güncellenirken bir hata oluştu',
+                'message' => 'An error occurred while updating profile',
                 'error' => $e->getMessage()
             ], 500);
         }
