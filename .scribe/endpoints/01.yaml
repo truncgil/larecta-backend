@@ -48,7 +48,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aPf36Zh8d6DcVk5abv1gEe4'
+      - 'Bearer 36E4Zceha5aVbkf1vPg8D6d'
     controller: null
     method: null
     route: null

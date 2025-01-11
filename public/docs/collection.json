@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Larecta CMS API Documentation",
-        "_postman_id": "b448068d-2bd4-43fc-a163-5e64ec97b35e",
+        "_postman_id": "a449353d-506b-428d-8555-f54858a13937",
         "description": "Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"beatae\",\"email\":\"liliane92@example.com\",\"password\":\"(92Q=6'{r+W]JU\"}"
+                            "raw": "{\"name\":\"mollitia\",\"email\":\"huels.cheyenne@example.net\",\"password\":\"a!nmZ*\"}"
                         },
                         "description": ""
                     },
@@ -107,7 +107,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"maye02@example.com\",\"password\":\"culpa\"}"
+                            "raw": "{\"email\":\"josie.borer@example.net\",\"password\":\"aut\"}"
                         },
                         "description": ""
                     },
@@ -230,7 +230,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ullam\",\"description\":\"Error id sit laudantium dolorem est consequatur veniam neque.\"}"
+                            "raw": "{\"name\":\"natus\",\"description\":\"Voluptatem ab voluptatum animi sint necessitatibus.\"}"
                         },
                         "description": ""
                     },
@@ -319,7 +319,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Odit nihil qui debitis voluptas labore debitis.\"}"
+                            "raw": "{\"description\":\"Inventore dolore occaecati ipsam praesentium explicabo et est.\"}"
                         },
                         "description": ""
                     },
@@ -425,7 +425,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"est\",\"description\":\"Quo ea est libero accusantium dicta animi voluptatem distinctio.\"}"
+                            "raw": "{\"name\":\"voluptatem\",\"description\":\"Et quidem aperiam aut temporibus vel iure.\"}"
                         },
                         "description": ""
                     },
@@ -514,7 +514,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"description\":\"Similique nihil nostrum eius temporibus eveniet et officiis.\"}"
+                            "raw": "{\"description\":\"Quaerat dolores qui omnis est unde et ut quam.\"}"
                         },
                         "description": ""
                     },
@@ -718,7 +718,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"j\",\"body\":\"sit\",\"slug\":\"quis\",\"type\":\"sequi\",\"status\":\"published\",\"content\":\"beatae\",\"meta\":\"[\\\"excepturi\\\",\\\"magnam\\\"]\"}"
+                            "raw": "{\"title\":\"nozrsmitertwjqcbru\",\"body\":\"eum\",\"slug\":\"ducimus\",\"type\":\"voluptas\",\"status\":\"archived\",\"content\":\"dicta\",\"meta\":\"[\\\"maiores\\\",\\\"similique\\\"]\"}"
                         },
                         "description": ""
                     },
@@ -807,7 +807,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"qyojocgjlxhejttaqvtazjfd\",\"body\":\"voluptate\",\"is_active\":false}"
+                            "raw": "{\"title\":\"cxcrinokzhzqmycd\",\"body\":\"aliquid\",\"is_active\":true}"
                         },
                         "description": ""
                     },
@@ -827,6 +827,430 @@
                                     "key": "content_id",
                                     "value": "2",
                                     "description": "The ID of the content."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/admin\/types",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/admin\/types",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"vfewjrohqivu\",\"description\":\"Fugiat blanditiis vitae iste dicta dolorem.\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/admin\/types\/{type_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                            "variable": [
+                                {
+                                    "id": "type_id",
+                                    "key": "type_id",
+                                    "value": "13",
+                                    "description": "The ID of the type."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/admin\/types\/{type_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                            "variable": [
+                                {
+                                    "id": "type_id",
+                                    "key": "type_id",
+                                    "value": "12",
+                                    "description": "The ID of the type."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dmfefwos\",\"description\":\"Vel dolorem odit ut velit dolorem asperiores quisquam.\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/admin\/types\/{type_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                            "variable": [
+                                {
+                                    "id": "type_id",
+                                    "key": "type_id",
+                                    "value": "16",
+                                    "description": "The ID of the type."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/admin\/types\/{type}\/metas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type\/metas",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "11",
+                                    "description": "The type."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/admin\/types\/{type}\/metas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type\/metas",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "14",
+                                    "description": "The type."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"gtbbafh\",\"field_type\":\"xlahpdbecqbofmrmarwzpgk\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/admin\/types\/{type}\/metas\/{meta}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type\/metas\/:meta",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "11",
+                                    "description": "The type."
+                                },
+                                {
+                                    "id": "meta",
+                                    "key": "meta",
+                                    "value": "praesentium",
+                                    "description": "The meta."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/admin\/types\/{type}\/metas\/{meta}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type\/metas\/:meta",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "4",
+                                    "description": "The type."
+                                },
+                                {
+                                    "id": "meta",
+                                    "key": "meta",
+                                    "value": "quidem",
+                                    "description": "The meta."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"sarsuwnz\",\"field_type\":\"eoxe\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/admin\/types\/{type}\/metas\/{meta}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/types\/:type\/metas\/:meta",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "14",
+                                    "description": "The type."
+                                },
+                                {
+                                    "id": "meta",
+                                    "key": "meta",
+                                    "value": "quis",
+                                    "description": "The meta."
                                 }
                             ]
                         },

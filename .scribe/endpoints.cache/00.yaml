@@ -29,7 +29,7 @@ endpoints:
         name: name
         description: "User's full name. Maximum: 255 characters."
         required: true
-        example: beatae
+        example: mollitia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -39,7 +39,7 @@ endpoints:
         name: email
         description: "User's email address. Maximum: 255 characters, must be unique."
         required: true
-        example: liliane92@example.com
+        example: huels.cheyenne@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -49,23 +49,23 @@ endpoints:
         name: password
         description: "User's password. Minimum: 6 characters."
         required: true
-        example: "(92Q=6'{r+W]JU"
+        example: 'a!nmZ*'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: beatae
-      email: liliane92@example.com
-      password: "(92Q=6'{r+W]JU"
+      name: mollitia
+      email: huels.cheyenne@example.net
+      password: 'a!nmZ*'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer gb6D4f8VZPacaeE135vh6kd'
+      - 'Bearer Z6bgVaaekc64D53vd1EP8hf'
     controller: null
     method: null
     route: null
@@ -96,7 +96,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: maye02@example.com
+        example: josie.borer@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,22 +106,22 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: culpa
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: maye02@example.com
-      password: culpa
+      email: josie.borer@example.net
+      password: aut
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer hgVd64cZ6EvD1aeb5fka3P8'
+      - 'Bearer 6b3ZdafEPeVga1k5h4vcD86'
     controller: null
     method: null
     route: null
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dZaVfkgEDv4a6e35h6bP81c'
+      - 'Bearer h64EZ5aP8a31dV6vbkecfgD'
     controller: null
     method: null
     route: null
@@ -189,7 +189,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer g6a6dfa485kEecDV31hbZvP'
+      - 'Bearer Ek5VZv4P6hag3cdefbD86a1'
     controller: null
     method: null
     route: null
@@ -232,7 +232,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer baa4g15ZckV3DEfd6P86hev'
+      - 'Bearer daV6Zk4831DcEeb6hg5aPfv'
     controller: null
     method: null
     route: null
@@ -263,7 +263,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: ullam
+        example: natus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -273,7 +273,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Error id sit laudantium dolorem est consequatur veniam neque.'
+        example: 'Voluptatem ab voluptatum animi sint necessitatibus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -290,15 +290,15 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: ullam
-      description: 'Error id sit laudantium dolorem est consequatur veniam neque.'
+      name: natus
+      description: 'Voluptatem ab voluptatum animi sint necessitatibus.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer EZ6156fvVkaehc4aD83gPdb'
+      - 'Bearer a85f1agZe6E3dv6bkVPD4hc'
     controller: null
     method: null
     route: null
@@ -352,7 +352,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gVa1h5D66PfcEvae3bdk48Z'
+      - 'Bearer b4Pcdakge53ahZ6f18EV6Dv'
     controller: null
     method: null
     route: null
@@ -404,7 +404,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Odit nihil qui debitis voluptas labore debitis.'
+        example: 'Inventore dolore occaecati ipsam praesentium explicabo et est.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -421,14 +421,14 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      description: 'Odit nihil qui debitis voluptas labore debitis.'
+      description: 'Inventore dolore occaecati ipsam praesentium explicabo et est.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Vcad5Df64kZhb36E1e8Pvga'
+      - 'Bearer PfZVk651vah436gc8ebaEDd'
     controller: null
     method: null
     route: null
@@ -473,7 +473,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer P6a3E4VdkZvba1Df8cgeh56'
+      - 'Bearer abdhgD6a3vP4Zf8E6V1k5ce'
     controller: null
     method: null
     route: null
@@ -516,7 +516,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PVk4c5ZdD36aebE1vhfga68'
+      - 'Bearer eh66E1bkaZDP8g43df5vVca'
     controller: null
     method: null
     route: null
@@ -547,7 +547,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: est
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -557,22 +557,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quo ea est libero accusantium dicta animi voluptatem distinctio.'
+        example: 'Et quidem aperiam aut temporibus vel iure.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: est
-      description: 'Quo ea est libero accusantium dicta animi voluptatem distinctio.'
+      name: voluptatem
+      description: 'Et quidem aperiam aut temporibus vel iure.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8egfaDabPZhvk6E1d3V654c'
+      - 'Bearer f6a4gEv65ZV1ekd38bDPahc'
     controller: null
     method: null
     route: null
@@ -626,7 +626,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3cg86PehE6d4D1kabvZV5fa'
+      - 'Bearer 5dV8gD1aPfaheZv466c3bEk'
     controller: null
     method: null
     route: null
@@ -678,21 +678,21 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Similique nihil nostrum eius temporibus eveniet et officiis.'
+        example: 'Quaerat dolores qui omnis est unde et ut quam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      description: 'Similique nihil nostrum eius temporibus eveniet et officiis.'
+      description: 'Quaerat dolores qui omnis est unde et ut quam.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer faDc4d86ak1gE5vhPZeVb63'
+      - 'Bearer hgad3PV8vc1bZ6akDf45eE6'
     controller: null
     method: null
     route: null
@@ -737,7 +737,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a3Df6bdveE81gcPhV56kZa4'
+      - 'Bearer ef1Za3P6bVav5hg68dk4cED'
     controller: null
     method: null
     route: null
@@ -780,7 +780,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a8hPagVekb663ZDcEv5d1f4'
+      - 'Bearer vV466Da3ZdEe5b8cg1hPkfa'
     controller: null
     method: null
     route: null
@@ -834,7 +834,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hPf6kdaZg48v3cbeaD1E65V'
+      - 'Bearer aPEV3c6h4k6bZa5geDfd1v8'
     controller: null
     method: null
     route: null
@@ -877,7 +877,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 64v15hbEdVk3aP6DceZ8fga'
+      - 'Bearer 4akPb6V13caEhD6gdZ5vef8'
     controller: null
     method: null
     route: null
@@ -908,7 +908,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: j
+        example: nozrsmitertwjqcbru
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -918,7 +918,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: sit
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -928,7 +928,7 @@ endpoints:
         name: slug
         description: ''
         required: true
-        example: quis
+        example: ducimus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -938,7 +938,7 @@ endpoints:
         name: type
         description: ''
         required: false
-        example: sequi
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -948,7 +948,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: published
+        example: archived
         type: string
         enumValues:
           - draft
@@ -961,7 +961,7 @@ endpoints:
         name: content
         description: ''
         required: false
-        example: beatae
+        example: dicta
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -971,27 +971,27 @@ endpoints:
         name: meta
         description: 'Must be a valid JSON string.'
         required: false
-        example: '["excepturi","magnam"]'
+        example: '["maiores","similique"]'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: j
-      body: sit
-      slug: quis
-      type: sequi
-      status: published
-      content: beatae
-      meta: '["excepturi","magnam"]'
+      title: nozrsmitertwjqcbru
+      body: eum
+      slug: ducimus
+      type: voluptas
+      status: archived
+      content: dicta
+      meta: '["maiores","similique"]'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer VdEc6kDv1hgab84a3e5PZf6'
+      - 'Bearer aaVeDd366cgEh1ZPb48f5vk'
     controller: null
     method: null
     route: null
@@ -1045,7 +1045,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6ag1df3DvPk6behE4Z8a5Vc'
+      - 'Bearer 6Zh4D3Pd5fvVEbagk81eac6'
     controller: null
     method: null
     route: null
@@ -1087,7 +1087,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: qyojocgjlxhejttaqvtazjfd
+        example: cxcrinokzhzqmycd
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1097,7 +1097,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: voluptate
+        example: aliquid
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1117,23 +1117,23 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: qyojocgjlxhejttaqvtazjfd
-      body: voluptate
-      is_active: false
+      title: cxcrinokzhzqmycd
+      body: aliquid
+      is_active: true
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer ce54fgZ3avPh66bk8Va1DdE'
+      - 'Bearer 4Z8dD5kVa1a66v3ghEcPfeb'
     controller: null
     method: null
     route: null
@@ -1178,7 +1178,592 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4VadPc58vE6kf6eag1Z3hDb'
+      - 'Bearer aZe15bEk4f6c86v3hgdPDVa'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/types
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer fZbVa5614aDdk36veh8PcgE'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/types
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: vfewjrohqivu
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Fugiat blanditiis vitae iste dicta dolorem.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: vfewjrohqivu
+      description: 'Fugiat blanditiis vitae iste dicta dolorem.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6Z15aeDcdvVgkhEP6bf38a4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/types/{type_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type_id:
+        name: type_id
+        description: 'The ID of the type.'
+        required: true
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type_id: 13
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Zd16c53kbfvDVPaEe46ga8h'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/types/{type_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type_id:
+        name: type_id
+        description: 'The ID of the type.'
+        required: true
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type_id: 12
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: dmfefwos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Vel dolorem odit ut velit dolorem asperiores quisquam.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: dmfefwos
+      description: 'Vel dolorem odit ut velit dolorem asperiores quisquam.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eDV3dfEg4b656cvkPa8hZ1a'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/types/{type_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type_id:
+        name: type_id
+        description: 'The ID of the type.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer kEacPD41b6d8Vge6a5Z3hfv'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/types/{type}/metas'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer hP8636ZVEkv5af4ecbDd1ag'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/types/{type}/metas'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: 14
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: gtbbafh
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      field_type:
+        name: field_type
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: xlahpdbecqbofmrmarwzpgk
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: gtbbafh
+      field_type: xlahpdbecqbofmrmarwzpgk
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer ce451D3aVv6Pbh8fkZEa6dg'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/types/{type}/metas/{meta}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      meta:
+        name: meta
+        description: 'The meta.'
+        required: true
+        example: praesentium
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: 11
+      meta: praesentium
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer f6becgEahZdP15vV8ka36D4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/types/{type}/metas/{meta}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      meta:
+        name: meta
+        description: 'The meta.'
+        required: true
+        example: quidem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: 4
+      meta: quidem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: sarsuwnz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      field_type:
+        name: field_type
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: eoxe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: sarsuwnz
+      field_type: eoxe
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Zb6VP8cDea6f514Ed3havgk'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/types/{type}/metas/{meta}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      meta:
+        name: meta
+        description: 'The meta.'
+        required: true
+        example: quis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: 14
+      meta: quis
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1v8fDeVkb4P3EadcZ56h6ga'
     controller: null
     method: null
     route: null

@@ -79,17 +79,17 @@ paths:
                 name:
                   type: string
                   description: "User's full name. Maximum: 255 characters."
-                  example: beatae
+                  example: mollitia
                   nullable: false
                 email:
                   type: string
                   description: "User's email address. Maximum: 255 characters, must be unique."
-                  example: liliane92@example.com
+                  example: huels.cheyenne@example.net
                   nullable: false
                 password:
                   type: string
                   description: "User's password. Minimum: 6 characters."
-                  example: "(92Q=6'{r+W]JU"
+                  example: 'a!nmZ*'
                   nullable: false
               required:
                 - name
@@ -114,12 +114,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: maye02@example.com
+                  example: josie.borer@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: culpa
+                  example: aut
                   nullable: false
               required:
                 - email
@@ -181,12 +181,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: ullam
+                  example: natus
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Error id sit laudantium dolorem est consequatur veniam neque.'
+                  example: 'Voluptatem ab voluptatum animi sint necessitatibus.'
                   nullable: true
                 permissions:
                   type: array
@@ -240,7 +240,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Odit nihil qui debitis voluptas labore debitis.'
+                  example: 'Inventore dolore occaecati ipsam praesentium explicabo et est.'
                   nullable: true
                 permissions:
                   type: array
@@ -304,12 +304,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: est
+                  example: voluptatem
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Quo ea est libero accusantium dicta animi voluptatem distinctio.'
+                  example: 'Et quidem aperiam aut temporibus vel iure.'
                   nullable: true
               required:
                 - name
@@ -357,7 +357,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Similique nihil nostrum eius temporibus eveniet et officiis.'
+                  example: 'Quaerat dolores qui omnis est unde et ut quam.'
                   nullable: true
     delete:
       summary: ''
@@ -466,27 +466,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: j
+                  example: nozrsmitertwjqcbru
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: sit
+                  example: eum
                   nullable: false
                 slug:
                   type: string
                   description: ''
-                  example: quis
+                  example: ducimus
                   nullable: false
                 type:
                   type: string
                   description: ''
-                  example: sequi
+                  example: voluptas
                   nullable: true
                 status:
                   type: string
                   description: ''
-                  example: published
+                  example: archived
                   nullable: false
                   enum:
                     - draft
@@ -495,12 +495,12 @@ paths:
                 content:
                   type: string
                   description: ''
-                  example: beatae
+                  example: dicta
                   nullable: true
                 meta:
                   type: string
                   description: 'Must be a valid JSON string.'
-                  example: '["excepturi","magnam"]'
+                  example: '["maiores","similique"]'
                   nullable: true
               required:
                 - title
@@ -546,12 +546,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qyojocgjlxhejttaqvtazjfd
+                  example: cxcrinokzhzqmycd
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: voluptate
+                  example: aliquid
                   nullable: false
                 slug:
                   type: string
@@ -561,7 +561,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: false
               required:
                 - title
@@ -583,6 +583,251 @@ paths:
         required: true
         schema:
           type: integer
+  /api/admin/types:
+    get:
+      summary: ''
+      operationId: getApiAdminTypes
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    post:
+      summary: ''
+      operationId: postApiAdminTypes
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vfewjrohqivu
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Fugiat blanditiis vitae iste dicta dolorem.'
+                  nullable: true
+              required:
+                - name
+  '/api/admin/types/{type_id}':
+    get:
+      summary: ''
+      operationId: getApiAdminTypesType_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    put:
+      summary: ''
+      operationId: putApiAdminTypesType_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: dmfefwos
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Vel dolorem odit ut velit dolorem asperiores quisquam.'
+                  nullable: true
+              required:
+                - name
+    delete:
+      summary: ''
+      operationId: deleteApiAdminTypesType_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: type_id
+        description: 'The ID of the type.'
+        example: 13
+        required: true
+        schema:
+          type: integer
+  '/api/admin/types/{type}/metas':
+    get:
+      summary: ''
+      operationId: getApiAdminTypesTypeMetas
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    post:
+      summary: ''
+      operationId: postApiAdminTypesTypeMetas
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gtbbafh
+                  nullable: false
+                field_type:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xlahpdbecqbofmrmarwzpgk
+                  nullable: false
+              required:
+                - name
+                - field_type
+    parameters:
+      -
+        in: path
+        name: type
+        description: 'The type.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+  '/api/admin/types/{type}/metas/{meta}':
+    get:
+      summary: ''
+      operationId: getApiAdminTypesTypeMetasMeta
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    put:
+      summary: ''
+      operationId: putApiAdminTypesTypeMetasMeta
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: sarsuwnz
+                  nullable: false
+                field_type:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: eoxe
+                  nullable: false
+              required:
+                - name
+                - field_type
+    delete:
+      summary: ''
+      operationId: deleteApiAdminTypesTypeMetasMeta
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: type
+        description: 'The type.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: meta
+        description: 'The meta.'
+        example: praesentium
+        required: true
+        schema:
+          type: string
 tags:
   -
     name: Authentication
