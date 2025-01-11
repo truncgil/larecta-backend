@@ -11,6 +11,14 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+    /**
+     * Yeni bir kullanıcı kaydı oluşturur.
+     * 
+     * @param Request $request Kayıt için gerekli bilgileri içeren istek nesnesi
+     * @return \Illuminate\Http\JsonResponse
+     * 
+     * @throws \Exception Kayıt işlemi sırasında oluşabilecek hatalar
+     */
     public function register(Request $request)
     {
         try {
@@ -51,6 +59,12 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Kullanıcı girişi yapar ve token oluşturur.
+     * 
+     * @param Request $request Giriş bilgilerini içeren istek nesnesi
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -84,6 +98,11 @@ class AuthController extends Controller
         ], 200);
     }
 
+    /**
+     * Kullanıcının çıkış yapmasını sağlar ve tüm tokenları siler.
+     * 
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function logout()
     {
         $user = Auth::user(); // Kullanıcıyı Auth ile alıyoruz
@@ -95,6 +114,11 @@ class AuthController extends Controller
         ], 200);
     }
 
+    /**
+     * Giriş yapmış kullanıcının bilgilerini getirir.
+     * 
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function user()
     {
         $user = Auth::user();
@@ -106,6 +130,14 @@ class AuthController extends Controller
         ], 200);
     }
 
+    /**
+     * Kullanıcı profilini günceller.
+     * 
+     * @param Request $request Güncellenecek profil bilgilerini içeren istek nesnesi
+     * @return \Illuminate\Http\JsonResponse
+     * 
+     * @throws \Exception Güncelleme işlemi sırasında oluşabilecek hatalar
+     */
     public function updateProfile(Request $request)
     {
         try {
