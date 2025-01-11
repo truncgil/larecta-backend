@@ -3,7 +3,8 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PermissionController;
 use App\Http\Controllers\Api\RoleController;
-use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\UserRoleController;
+use App\Http\Controllers\ContentController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
@@ -44,11 +45,30 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // Kullanıcı-Rol Yönetimi
     Route::prefix('users')->middleware('role:Super Admin')->group(function () {
-        Route::get('/', [UserController::class, 'index']);
-        Route::get('/{user}', [UserController::class, 'show']);
-        Route::post('/{user}/roles', [UserController::class, 'syncRoles']);
-        Route::get('/{user}/roles', [UserController::class, 'getRoles']);
-        Route::post('/{user}/permissions', [UserController::class, 'syncPermissions']);
-        Route::get('/{user}/permissions', [UserController::class, 'getPermissions']);
+        Route::get('/', [UserRoleController::class, 'index']);
+        Route::get('/{user}', [UserRoleController::class, 'show']);
+        Route::post('/{user}/roles', [UserRoleController::class, 'syncRoles']);
+        Route::get('/{user}/roles', [UserRoleController::class, 'getRoles']);
+        Route::post('/{user}/permissions', [UserRoleController::class, 'syncPermissions']);
+        Route::get('/{user}/permissions', [UserRoleController::class, 'getPermissions']);
     });
 }); 
+
+// Contents için API endpoint'leri
+Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
+    // Tüm içerikleri listele
+    Route::get('/contents', [ContentController::class, 'index']);
+    
+    // Yeni içerik oluştur
+    Route::post('/contents', [ContentController::class, 'store']);
+    
+    // Belirli bir içeriği görüntüle
+    Route::get('/contents/{content}', [ContentController::class, 'show']);
+    
+    // Belirli bir içeriği güncelle
+    Route::put('/contents/{content}', [ContentController::class, 'update']);
+    
+    // Belirli bir içeriği sil
+    Route::delete('/contents/{content}', [ContentController::class, 'destroy']);
+});
+
