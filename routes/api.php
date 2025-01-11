@@ -4,7 +4,9 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PermissionController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserRoleController;
-use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Api\ContentController;
+use App\Http\Controllers\Api\TypeController;
+use App\Http\Controllers\Api\TypeMetaController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
@@ -54,21 +56,27 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 }); 
 
-// Contents için API endpoint'leri
+// Contents, Types ve TypeMetas için API endpoint'leri
 Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
-    // Tüm içerikleri listele
+    // Contents rotaları
     Route::get('/contents', [ContentController::class, 'index']);
-    
-    // Yeni içerik oluştur
     Route::post('/contents', [ContentController::class, 'store']);
-    
-    // Belirli bir içeriği görüntüle
     Route::get('/contents/{content}', [ContentController::class, 'show']);
-    
-    // Belirli bir içeriği güncelle
     Route::put('/contents/{content}', [ContentController::class, 'update']);
-    
-    // Belirli bir içeriği sil
     Route::delete('/contents/{content}', [ContentController::class, 'destroy']);
+    
+    // Types rotaları
+    Route::get('/types', [TypeController::class, 'index']);
+    Route::post('/types', [TypeController::class, 'store']);
+    Route::get('/types/{type}', [TypeController::class, 'show']);
+    Route::put('/types/{type}', [TypeController::class, 'update']);
+    Route::delete('/types/{type}', [TypeController::class, 'destroy']);
+    
+    // Type Metas rotaları
+    Route::get('/types/{type}/metas', [TypeMetaController::class, 'index']);
+    Route::post('/types/{type}/metas', [TypeMetaController::class, 'store']);
+    Route::get('/types/{type}/metas/{meta}', [TypeMetaController::class, 'show']);
+    Route::put('/types/{type}/metas/{meta}', [TypeMetaController::class, 'update']);
+    Route::delete('/types/{type}/metas/{meta}', [TypeMetaController::class, 'destroy']);
 });
 
