@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Yeni bir kullanıcı kaydı oluşturur.'
+      title: 'Creates a new user registration.'
       description: ''
       authenticated: false
       custom: []
@@ -23,8 +23,41 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: "User's full name. Maximum: 255 characters."
+        required: true
+        example: porro
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: "User's email address. Maximum: 255 characters, must be unique."
+        required: true
+        example: ocartwright@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: "User's password. Minimum: 6 characters."
+        required: true
+        example: 'bn5W/}<#_D}wP:f'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: porro
+      email: ocartwright@example.org
+      password: 'bn5W/}<#_D}wP:f'
     fileParameters: []
     responses: []
     responseFields: []
@@ -42,7 +75,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Kullanıcı girişi yapar ve token oluşturur.'
+      title: 'Authenticates user and creates token.'
       description: ''
       authenticated: false
       custom: []
@@ -58,7 +91,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ike78@example.com
+        example: feeney.terrell@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -68,15 +101,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: quo
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: ike78@example.com
-      password: quo
+      email: feeney.terrell@example.net
+      password: eos
     fileParameters: []
     responses: []
     responseFields: []
@@ -94,7 +127,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Kullanıcının çıkış yapmasını sağlar ve tüm tokenları siler.'
+      title: 'Logs out the user and deletes all tokens.'
       description: ''
       authenticated: false
       custom: []
@@ -124,7 +157,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Giriş yapmış kullanıcının bilgilerini getirir.'
+      title: "Retrieves authenticated user's information."
       description: ''
       authenticated: false
       custom: []
@@ -163,7 +196,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Kullanıcı profilini günceller.'
+      title: 'Updates user profile information.'
       description: ''
       authenticated: false
       custom: []
@@ -239,7 +272,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: ut
+        example: laudantium
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -249,7 +282,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Illum id impedit enim nihil doloremque.'
+        example: 'Quas laboriosam facilis neque fuga praesentium qui.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -266,8 +299,8 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: ut
-      description: 'Illum id impedit enim nihil doloremque.'
+      name: laudantium
+      description: 'Quas laboriosam facilis neque fuga praesentium qui.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -363,7 +396,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Vel enim rerum delectus.'
+        example: 'Numquam voluptatem sed reiciendis quo in ullam architecto dolore.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -380,7 +413,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      description: 'Vel enim rerum delectus.'
+      description: 'Numquam voluptatem sed reiciendis quo in ullam architecto dolore.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -494,7 +527,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: et
+        example: aliquam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -504,15 +537,15 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Earum quia sint amet vel iure excepturi aut.'
+        example: 'Ut qui eaque veritatis reprehenderit magnam ea.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: et
-      description: 'Earum quia sint amet vel iure excepturi aut.'
+      name: aliquam
+      description: 'Ut qui eaque veritatis reprehenderit magnam ea.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -617,14 +650,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'At molestiae et quasi ut molestias.'
+        example: 'Rerum magni laudantium officia aut reiciendis.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      description: 'At molestiae et quasi ut molestias.'
+      description: 'Rerum magni laudantium officia aut reiciendis.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -809,7 +842,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: guwexk
+        example: aoygxdgdnkjchb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -819,7 +852,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: nisi
+        example: laborum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -829,7 +862,7 @@ endpoints:
         name: slug
         description: ''
         required: true
-        example: esse
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -846,9 +879,9 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: guwexk
-      body: nisi
-      slug: esse
+      title: aoygxdgdnkjchb
+      body: laborum
+      slug: quia
       is_active: false
     fileParameters: []
     responses: []
@@ -879,14 +912,14 @@ endpoints:
         name: content_id
         description: 'The ID of the content.'
         required: true
-        example: 19
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 19
+      content_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -929,14 +962,14 @@ endpoints:
         name: content_id
         description: 'The ID of the content.'
         required: true
-        example: 5
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 5
+      content_id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -944,7 +977,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: fjwnutqacdjelymgwsm
+        example: arbjeiczdbsnnq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -954,7 +987,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: eligendi
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -974,16 +1007,16 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: fjwnutqacdjelymgwsm
-      body: eligendi
-      is_active: false
+      title: arbjeiczdbsnnq
+      body: nesciunt
+      is_active: true
     fileParameters: []
     responses: []
     responseFields: []
@@ -1013,14 +1046,14 @@ endpoints:
         name: content_id
         description: 'The ID of the content.'
         required: true
-        example: 9
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 9
+      content_id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

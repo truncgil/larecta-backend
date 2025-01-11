@@ -9,18 +9,44 @@ servers:
 paths:
   /api/auth/register:
     post:
-      summary: 'Yeni bir kullanıcı kaydı oluşturur.'
-      operationId: yeniBirKullancKaydOluturur
+      summary: 'Creates a new user registration.'
+      operationId: createsANewUserRegistration
       description: ''
       parameters: []
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: "User's full name. Maximum: 255 characters."
+                  example: porro
+                  nullable: false
+                email:
+                  type: string
+                  description: "User's email address. Maximum: 255 characters, must be unique."
+                  example: ocartwright@example.org
+                  nullable: false
+                password:
+                  type: string
+                  description: "User's password. Minimum: 6 characters."
+                  example: 'bn5W/}<#_D}wP:f'
+                  nullable: false
+              required:
+                - name
+                - email
+                - password
       security: []
   /api/auth/login:
     post:
-      summary: 'Kullanıcı girişi yapar ve token oluşturur.'
-      operationId: kullancGiriiYaparVeTokenOluturur
+      summary: 'Authenticates user and creates token.'
+      operationId: authenticatesUserAndCreatesToken
       description: ''
       parameters: []
       responses: {  }
@@ -36,12 +62,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ike78@example.com
+                  example: feeney.terrell@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: quo
+                  example: eos
                   nullable: false
               required:
                 - email
@@ -49,8 +75,8 @@ paths:
       security: []
   /api/auth/logout:
     post:
-      summary: 'Kullanıcının çıkış yapmasını sağlar ve tüm tokenları siler.'
-      operationId: kullancnnkYapmasnSalarVeTmTokenlarSiler
+      summary: 'Logs out the user and deletes all tokens.'
+      operationId: logsOutTheUserAndDeletesAllTokens
       description: ''
       parameters: []
       responses: {  }
@@ -59,8 +85,8 @@ paths:
       security: []
   /api/auth/user:
     get:
-      summary: 'Giriş yapmış kullanıcının bilgilerini getirir.'
-      operationId: giriYapmKullancnnBilgileriniGetirir
+      summary: "Retrieves authenticated user's information."
+      operationId: retrievesAuthenticatedUsersInformation
       description: ''
       parameters: []
       responses:
@@ -81,8 +107,8 @@ paths:
       security: []
   /api/auth/profile:
     put:
-      summary: 'Kullanıcı profilini günceller.'
-      operationId: kullancProfiliniGnceller
+      summary: 'Updates user profile information.'
+      operationId: updatesUserProfileInformation
       description: ''
       parameters: []
       responses: {  }
@@ -117,12 +143,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: ut
+                  example: laudantium
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Illum id impedit enim nihil doloremque.'
+                  example: 'Quas laboriosam facilis neque fuga praesentium qui.'
                   nullable: true
                 permissions:
                   type: array
@@ -166,7 +192,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Vel enim rerum delectus.'
+                  example: 'Numquam voluptatem sed reiciendis quo in ullam architecto dolore.'
                   nullable: true
                 permissions:
                   type: array
@@ -233,12 +259,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: et
+                  example: aliquam
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Earum quia sint amet vel iure excepturi aut.'
+                  example: 'Ut qui eaque veritatis reprehenderit magnam ea.'
                   nullable: true
               required:
                 - name
@@ -288,7 +314,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'At molestiae et quasi ut molestias.'
+                  example: 'Rerum magni laudantium officia aut reiciendis.'
                   nullable: true
       security: []
     delete:
@@ -378,17 +404,17 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: guwexk
+                  example: aoygxdgdnkjchb
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: nisi
+                  example: laborum
                   nullable: false
                 slug:
                   type: string
                   description: ''
-                  example: esse
+                  example: quia
                   nullable: false
                 is_active:
                   type: boolean
@@ -440,12 +466,12 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fjwnutqacdjelymgwsm
+                  example: arbjeiczdbsnnq
                   nullable: false
                 body:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: nesciunt
                   nullable: false
                 slug:
                   type: string
@@ -455,7 +481,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: false
               required:
                 - title
@@ -475,7 +501,7 @@ paths:
         in: path
         name: content_id
         description: 'The ID of the content.'
-        example: 19
+        example: 1
         required: true
         schema:
           type: integer
