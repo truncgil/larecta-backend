@@ -7,9 +7,18 @@ use App\Models\TypeMeta;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-
+/**
+ * @group Type Management
+ * @subgroup TypeMeta Controller
+ * This controller handles the CRUD operations for the TypeMeta model.
+ */
 class TypeMetaController extends Controller
 {
+    /**
+     * @group Type Management
+     * @subgroup Listing Operations
+     * Get all meta fields for a type.
+     */
     public function index($typeId)
     {
         $type = Type::findOrFail($typeId);
@@ -20,6 +29,11 @@ class TypeMetaController extends Controller
         ]);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup Form Operations
+     * Create a new meta field for a type.
+     */
     public function create($typeId)
     {
         $type = Type::findOrFail($typeId);
@@ -28,6 +42,11 @@ class TypeMetaController extends Controller
         ]);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup Form Operations
+     * Store a new meta field for a type.
+     */
     public function store(Request $request, $typeId)
     {
         $request->validate([
@@ -44,6 +63,11 @@ class TypeMetaController extends Controller
         ], 201);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup View Operations
+     * Display the specified meta field.
+     */
     public function show($typeId, TypeMeta $typeMeta)
     {
         return response()->json([
@@ -51,6 +75,11 @@ class TypeMetaController extends Controller
         ]);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup Form Operations
+     * Show the form for editing the meta field.
+     */
     public function edit($typeId, TypeMeta $typeMeta)
     {
         return response()->json([
@@ -58,6 +87,11 @@ class TypeMetaController extends Controller
         ]);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup Update Operations
+     * Update the specified meta field.
+     */
     public function update(Request $request, $typeId, TypeMeta $typeMeta)
     {
         $request->validate([
@@ -73,6 +107,11 @@ class TypeMetaController extends Controller
         ]);
     }
 
+    /**
+     * @group Type Management
+     * @subgroup Delete Operations
+     * Remove the specified meta field.
+     */
     public function destroy($typeId, TypeMeta $typeMeta)
     {
         $typeMeta->delete();

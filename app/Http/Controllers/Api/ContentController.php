@@ -10,6 +10,8 @@ use Illuminate\Routing\Controller;
 class ContentController extends Controller
 {
     /**
+     * @group Content Management
+     * @subgroup Listing Operations
      * Display a listing of the resource.
      */
     public function index()
@@ -18,6 +20,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup Form Operations
      * Show the form for creating a new resource.
      */
     public function create()
@@ -26,6 +30,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup Create Operations
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -43,6 +49,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup View Operations
      * Display the specified resource.
      */
     public function show(Content $content)
@@ -51,6 +59,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup Form Operations
      * Show the form for editing the specified resource.
      */
     public function edit(Content $content)
@@ -59,6 +69,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup Update Operations
      * Update the specified resource in storage.
      */
     public function update(Request $request, Content $content)
@@ -75,6 +87,8 @@ class ContentController extends Controller
     }
 
     /**
+     * @group Content Management
+     * @subgroup Delete Operations
      * Remove the specified resource from storage.
      */
     public function destroy(Content $content)

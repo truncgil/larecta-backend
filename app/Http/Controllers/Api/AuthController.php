@@ -14,6 +14,9 @@ class AuthController extends Controller
     /**
      * Creates a new user registration.
      * 
+     * @group Authentication
+     * @subgroup Registration
+     * 
      * @param Request $request Request object containing registration information
     * @bodyParam name string required User's full name. Maximum: 255 characters.
     * @bodyParam email string required User's email address. Maximum: 255 characters, must be unique.
@@ -65,6 +68,9 @@ class AuthController extends Controller
     /**
      * Authenticates user and creates token.
      * 
+     * @group Authentication
+     * @subgroup Login
+     * 
      * @param Request $request Request object containing login credentials
      * @return \Illuminate\Http\JsonResponse
      */
@@ -104,6 +110,9 @@ class AuthController extends Controller
     /**
      * Logs out the user and deletes all tokens.
      * 
+     * @group Authentication
+     * @subgroup Logout
+     * 
      * @return \Illuminate\Http\JsonResponse
      */
     public function logout()
@@ -122,6 +131,7 @@ class AuthController extends Controller
      * Get user information.
      * 
      * @group Authentication
+     * @subgroup User Profile
      * @authenticated
      * 
      * @response 200 {
@@ -152,6 +162,9 @@ class AuthController extends Controller
 
     /**
      * Updates user profile information.
+     * 
+     * @group Authentication
+     * @subgroup User Profile
      * 
      * @param Request $request Request object containing profile update information
      * @authenticated

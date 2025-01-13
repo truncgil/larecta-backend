@@ -6,7 +6,11 @@ use Illuminate\Routing\Controller;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
-
+/**
+ * @group Type Management
+ * @subgroup Type Controller
+ * This controller handles the CRUD operations for the Type model.
+ */
 class TypeController extends Controller
 {
     public function index()
