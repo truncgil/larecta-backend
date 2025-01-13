@@ -93,7 +93,18 @@ class ContentController extends Controller
      */
     public function destroy(Content $content)
     {
-        $content->delete();
-        return response()->noContent();
+        try {
+            $content->delete();
+            return response()->json([
+                'message' => 'Content deleted successfully',
+                'success' => true
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Error occurred while deleting content',
+                'success' => false,
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }
