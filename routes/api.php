@@ -10,6 +10,10 @@ use App\Http\Controllers\Api\TypeMetaController;
 use App\Http\Middleware\RoleMiddleware;
 use Illuminate\Support\Facades\Route;
 
+Route::options('{any}', function () {
+    return response()->json([], 204);
+})->where('any', '.*');
+
 Route::prefix('auth')->group(function () {
     Route::middleware('throttle:6,1')->group(function () {
         Route::post('/register', [AuthController::class, 'register']);
