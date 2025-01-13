@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 56b13egkaZfd6vVchaD84EP'
+      - 'Bearer bZ6gde8V5fPk6a43vaEDhc1'
     controller: null
     method: null
     route: null
@@ -74,7 +74,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: architecto
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -84,22 +84,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quod praesentium sit qui cumque.'
+        example: 'Sint cumque similique voluptatum dolorem rerum facere.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: architecto
-      description: 'Quod praesentium sit qui cumque.'
+      name: aut
+      description: 'Sint cumque similique voluptatum dolorem rerum facere.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6edEcv4VgfZakh13aPDb658'
+      - 'Bearer g8hb36ac4Eed5aDv1P6ZfVk'
     controller: null
     method: null
     route: null
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 516Ehd3PvDga8eVfcb6aZk4'
+      - 'Bearer PEavDg54d1hecaZ3kfV68b6'
     controller: null
     method: null
     route: null
@@ -209,21 +209,21 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Aut doloremque assumenda ea velit et.'
+        example: 'Omnis explicabo nulla atque nihil quia cumque.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      description: 'Aut doloremque assumenda ea velit et.'
+      description: 'Omnis explicabo nulla atque nihil quia cumque.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer kcbvd56e1a8Z46PfVaDhEg3'
+      - 'Bearer 3eP18VfcDhZ4dEaa566vbkg'
     controller: null
     method: null
     route: null
@@ -270,7 +270,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Va6vcDbhag68k4Zd15Eef3P'
+      - 'Bearer deZ5Ea64h1cba68kgfVP3vD'
     controller: null
     method: null
     route: null

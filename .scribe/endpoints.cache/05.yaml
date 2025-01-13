@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3Zcd615VeaD6b8hEaPfvk4g'
+      - 'Bearer fE4a6De1hPbcZ5a8vkV6g3d'
     controller: null
     method: null
     route: null
@@ -76,7 +76,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hemisopstzrx
+        example: ot
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,22 +86,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Repellendus iste perspiciatis eligendi nostrum.'
+        example: 'Beatae rerum sint quod tempore et optio.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: hemisopstzrx
-      description: 'Repellendus iste perspiciatis eligendi nostrum.'
+      name: ot
+      description: 'Beatae rerum sint quod tempore et optio.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer D3b4aV1fEZagk65edch86vP'
+      - 'Bearer E6DZPka1bvfVgh5d8a4e63c'
     controller: null
     method: null
     route: null
@@ -130,14 +130,14 @@ endpoints:
         name: type_id
         description: 'The ID of the type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type_id: 2
+      type_id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -157,7 +157,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aavVbkcPe56E4fdh631DZ8g'
+      - 'Bearer de16vfVahkaDEPc4g856b3Z'
     controller: null
     method: null
     route: null
@@ -186,14 +186,14 @@ endpoints:
         name: type_id
         description: 'The ID of the type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type_id: 2
+      type_id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -201,7 +201,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ypgqncunfuwctesn
+        example: mvgrmaruszxsdv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -211,22 +211,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quaerat et rerum eligendi facilis.'
+        example: 'Esse officiis ea laborum voluptatem possimus impedit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: ypgqncunfuwctesn
-      description: 'Quaerat et rerum eligendi facilis.'
+      name: mvgrmaruszxsdv
+      description: 'Esse officiis ea laborum voluptatem possimus impedit.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Zcaa4edEkb6f5VhP8Dg36v'
+      - 'Bearer 56vPhZa68aEck4gd3ef1DbV'
     controller: null
     method: null
     route: null
@@ -255,14 +255,14 @@ endpoints:
         name: type_id
         description: 'The ID of the type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type_id: 2
+      type_id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -273,7 +273,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D13khd65E48ZbPa6ageVfcv'
+      - 'Bearer 48kg6aabfdVve1EZh6D3cP5'
     controller: null
     method: null
     route: null
@@ -302,14 +302,14 @@ endpoints:
         name: type
         description: 'The type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type: 2
+      type: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -329,7 +329,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 851vgkbahEeaf6dc3Z6PV4D'
+      - 'Bearer aE34fkcVaeDg8615dvhb6ZP'
     controller: null
     method: null
     route: null
@@ -358,14 +358,14 @@ endpoints:
         name: type
         description: 'The type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type: 2
+      type: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -373,7 +373,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: lk
+        example: reknx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -383,22 +383,22 @@ endpoints:
         name: field_type
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gpieqjjpsotrfvd
+        example: gxvgxqvgcoukrbx
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: lk
-      field_type: gpieqjjpsotrfvd
+      name: reknx
+      field_type: gxvgxqvgcoukrbx
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Dkh61ev8aZ645gaP3cbfdVE'
+      - 'Bearer 3D61PakVdZc4v5Eagfhb86e'
     controller: null
     method: null
     route: null
@@ -427,7 +427,7 @@ endpoints:
         name: type
         description: 'The type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -437,15 +437,15 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: beatae
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type: 2
-      meta: beatae
+      type: 3
+      meta: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -465,7 +465,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4ePadgE63DbfZV5va8hck61'
+      - 'Bearer agkebZf65Vc36avE4d1DhP8'
     controller: null
     method: null
     route: null
@@ -494,7 +494,7 @@ endpoints:
         name: type
         description: 'The type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -504,15 +504,15 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: optio
+        example: repudiandae
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type: 2
-      meta: optio
+      type: 3
+      meta: repudiandae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -520,7 +520,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ms
+        example: gcxsetidlihedtakyklykwdl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -530,22 +530,22 @@ endpoints:
         name: field_type
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hoszdvpjtvwjpegmltskcgjfj
+        example: miclvcdrntqoxzdohlq
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: ms
-      field_type: hoszdvpjtvwjpegmltskcgjfj
+      name: gcxsetidlihedtakyklykwdl
+      field_type: miclvcdrntqoxzdohlq
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer fD6aPEhgaV6ke34cZ8d15vb'
+      - 'Bearer ev4baDP5163hk8gcaEdZV6f'
     controller: null
     method: null
     route: null
@@ -574,7 +574,7 @@ endpoints:
         name: type
         description: 'The type.'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -584,15 +584,15 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: magnam
+        example: id
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      type: 2
-      meta: magnam
+      type: 3
+      meta: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -603,7 +603,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer EchP6da1D863VkbaZv54fge'
+      - 'Bearer 1vD6kPa5chbaVd4f6eEZ8g3'
     controller: null
     method: null
     route: null

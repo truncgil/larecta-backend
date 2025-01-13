@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer cV861abkgEfDhda4vPZ53e6'
+      - 'Bearer bgkV1ha64efZvP8aED356dc'
     controller: null
     method: null
     route: null
@@ -76,7 +76,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kgsuyxss
+        example: uciv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +86,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: non
+        example: delectus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: slug
         description: ''
         required: true
-        example: saepe
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,7 +106,7 @@ endpoints:
         name: type
         description: ''
         required: false
-        example: officia
+        example: illo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -116,7 +116,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: draft
+        example: archived
         type: string
         enumValues:
           - draft
@@ -129,7 +129,7 @@ endpoints:
         name: content
         description: ''
         required: false
-        example: minima
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -139,27 +139,27 @@ endpoints:
         name: meta
         description: 'Must be a valid JSON string.'
         required: false
-        example: '["ipsum","aspernatur"]'
+        example: '["quia","necessitatibus"]'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: kgsuyxss
-      body: non
-      slug: saepe
-      type: officia
-      status: draft
-      content: minima
-      meta: '["ipsum","aspernatur"]'
+      title: uciv
+      body: delectus
+      slug: blanditiis
+      type: illo
+      status: archived
+      content: sit
+      meta: '["quia","necessitatibus"]'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer e6fcdg6Zak4h8P1VD5a3bvE'
+      - 'Bearer eZV8vhfkPa4616ad5DE3bcg'
     controller: null
     method: null
     route: null
@@ -167,7 +167,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/admin/contents/{content_id}'
+    uri: 'api/admin/contents/{content}'
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
@@ -184,18 +184,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      content_id:
-        name: content_id
-        description: 'The ID of the content.'
+      content:
+        name: content
+        description: 'The content.'
         required: true
-        example: 2
-        type: integer
+        example: sunt
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 2
+      content: sunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -215,7 +215,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PcaZD5EVavk6g864hdf1e3b'
+      - 'Bearer Vaedg81656vZhbf43kPacDE'
     controller: null
     method: null
     route: null
@@ -244,14 +244,14 @@ endpoints:
         name: content_id
         description: 'The ID of the content.'
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 2
+      content_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -259,7 +259,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: mqcbq
+        example: myqhzppfcrgezkowbdnphzngs
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -269,7 +269,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: non
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -289,23 +289,23 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      title: mqcbq
-      body: non
-      is_active: true
+      title: myqhzppfcrgezkowbdnphzngs
+      body: quo
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1PhE36avbDcdZ68feV45akg'
+      - 'Bearer 6a5D4kc6gvPae8ZdEV3bf1h'
     controller: null
     method: null
     route: null
@@ -334,14 +334,14 @@ endpoints:
         name: content_id
         description: 'The ID of the content.'
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content_id: 2
+      content_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -352,7 +352,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E56Peabv46aVh1cDf8dkZg3'
+      - 'Bearer caV4eaPgEDZd5kbh61v6f38'
     controller: null
     method: null
     route: null

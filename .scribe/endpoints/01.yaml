@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer eafdgZ6aE6k5c1v38hDbPV4'
+      - 'Bearer 3bk8DPh5V61g4Ea6daceZvf'
     controller: null
     method: null
     route: null
@@ -74,7 +74,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: iusto
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -84,7 +84,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Qui labore voluptates aut sapiente quis explicabo.'
+        example: 'Cupiditate corrupti commodi delectus quis.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -101,15 +101,15 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: iusto
-      description: 'Qui labore voluptates aut sapiente quis explicabo.'
+      name: architecto
+      description: 'Cupiditate corrupti commodi delectus quis.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer dZ5eVv6ahf1P3D6acb4E8gk'
+      - 'Bearer 863VEh6vbdDP5gceaaZ1fk4'
     controller: null
     method: null
     route: null
@@ -165,7 +165,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hPEb8caV1gkvd63efZa546D'
+      - 'Bearer E64bdZDegaav3h65fckPV81'
     controller: null
     method: null
     route: null
@@ -219,7 +219,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quis quo laudantium adipisci ut.'
+        example: 'Molestiae beatae ut accusantium asperiores numquam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,14 +236,14 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      description: 'Quis quo laudantium adipisci ut.'
+      description: 'Molestiae beatae ut accusantium asperiores numquam.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 68VZ3vEab4e6dakPhg51cDf'
+      - 'Bearer 8E3f156a4VvehdgbcaZkP6D'
     controller: null
     method: null
     route: null
@@ -290,7 +290,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6Ec43vPa158badVeDk6hfgZ'
+      - 'Bearer Vakhd54bE8P6f1Z6Dce3avg'
     controller: null
     method: null
     route: null

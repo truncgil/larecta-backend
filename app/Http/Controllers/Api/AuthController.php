@@ -170,6 +170,31 @@ class AuthController extends Controller
      * @authenticated
      * @return \Illuminate\Http\JsonResponse
      * 
+     * @bodyParam name string optional Kullanıcının tam adı. Maximum: 255 karakter.
+     * @bodyParam email string optional Kullanıcının email adresi. Maximum: 255 karakter, benzersiz olmalı.
+     * @bodyParam password string optional Yeni şifre. Minimum: 8 karakter.
+     * @bodyParam password_confirmation string optional Şifre onayı. password ile eşleşmeli.
+     * 
+     * @response 200 {
+     *   "status": true,
+     *   "message": "Profile updated successfully",
+     *   "data": {
+     *     "id": 1,
+     *     "name": "John Doe",
+     *     "email": "john@example.com",
+     *     "updated_at": "2024-01-15T10:00:00.000000Z"
+     *   }
+     * }
+     * 
+     * @response 422 {
+     *   "status": false,
+     *   "message": "Validation error",
+     *   "errors": {
+     *     "email": ["The email has already been taken."],
+     *     "password": ["The password confirmation does not match."]
+     *   }
+     * }
+     * 
      * @throws \Exception Possible errors during profile update process
      */
     public function updateProfile(Request $request)

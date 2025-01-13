@@ -53,9 +53,14 @@ class ContentController extends Controller
      * @subgroup View Operations
      * Display the specified resource.
      */
-    public function show(Content $content)
+    public function show($id)
     {
-        return $content;
+        $content = Content::findOrFail($id);
+        
+        return response()->json([
+            'content' => $content,
+            'breadcrumb' => $content->getBreadcrumbArray()
+        ]);
     }
 
     /**
