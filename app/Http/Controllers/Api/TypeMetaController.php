@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 /**
+ * This controller handles the CRUD operations for the TypeMeta model.
  * @group Type Management
  * @subgroup TypeMeta Controller
- * This controller handles the CRUD operations for the TypeMeta model.
  */
 class TypeMetaController extends Controller
 {
     /**
+     * Get all meta fields for a type.
      * @group Type Management
      * @subgroup Listing Operations
-     * Get all meta fields for a type.
      */
     public function index($typeId)
     {
@@ -30,9 +30,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Create a new meta field for a type.
      * @group Type Management
      * @subgroup Form Operations
-     * Create a new meta field for a type.
      */
     public function create($typeId)
     {
@@ -43,9 +43,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Store a new meta field for a type.
      * @group Type Management
      * @subgroup Form Operations
-     * Store a new meta field for a type.
      */
     public function store(Request $request, $typeId)
     {
@@ -64,9 +64,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Display the specified meta field.
      * @group Type Management
      * @subgroup View Operations
-     * Display the specified meta field.
      */
     public function show($typeId, TypeMeta $typeMeta)
     {
@@ -76,9 +76,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Show the form for editing the meta field.
      * @group Type Management
      * @subgroup Form Operations
-     * Show the form for editing the meta field.
      */
     public function edit($typeId, TypeMeta $typeMeta)
     {
@@ -88,9 +88,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Update the specified meta field.
      * @group Type Management
      * @subgroup Update Operations
-     * Update the specified meta field.
      */
     public function update(Request $request, $typeId, TypeMeta $typeMeta)
     {
@@ -108,9 +108,9 @@ class TypeMetaController extends Controller
     }
 
     /**
+     * Remove the specified meta field.
      * @group Type Management
      * @subgroup Delete Operations
-     * Remove the specified meta field.
      */
     public function destroy($typeId, TypeMeta $typeMeta)
     {

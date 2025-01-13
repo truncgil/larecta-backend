@@ -10,9 +10,10 @@ use Illuminate\Routing\Controller;
 class ContentController extends Controller
 {
     /**
+     * Display a listing of the resource.
+     * 
      * @group Content Management
      * @subgroup Listing Operations
-     * Display a listing of the resource.
      */
     public function index()
     {
@@ -20,9 +21,10 @@ class ContentController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     * 
      * @group Content Management
      * @subgroup Form Operations
-     * Show the form for creating a new resource.
      */
     public function create()
     {
@@ -30,9 +32,10 @@ class ContentController extends Controller
     }
 
     /**
+     * Store a newly created resource in storage.
+     * 
      * @group Content Management
      * @subgroup Create Operations
-     * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
@@ -43,15 +46,23 @@ class ContentController extends Controller
             'type' => 'nullable|string',
             'status' => 'required|in:draft,published,archived',
             'content' => 'nullable|string',
-            'meta' => 'nullable|json'
+            'meta' => 'nullable|json',
+            'parent_id' => 'nullable|exists:contents,id',
+            'level' => 'nullable|integer|min:0',
+            'order' => 'nullable|integer|min:0'
         ]);
-        return response()->json(Content::create($validated), 201);
+        return response()->json([
+            'status' => true,
+            'message' => 'Content created successfully',
+            'data' => Content::create($validated)
+        ], 201);
     }
 
     /**
+     * Display the specified resource.
+     * 
      * @group Content Management
      * @subgroup View Operations
-     * Display the specified resource.
      */
     public function show($id)
     {
@@ -64,9 +75,10 @@ class ContentController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     * 
      * @group Content Management
      * @subgroup Form Operations
-     * Show the form for editing the specified resource.
      */
     public function edit(Content $content)
     {
@@ -74,9 +86,10 @@ class ContentController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     * 
      * @group Content Management
      * @subgroup Update Operations
-     * Update the specified resource in storage.
      */
     public function update(Request $request, Content $content)
     {
@@ -84,17 +97,25 @@ class ContentController extends Controller
             'title' => 'sometimes|required|max:255',
             'body' => 'sometimes|required',
             'slug' => 'sometimes|required|unique:contents,slug,' . $content->id,
-            'is_active' => 'boolean'
+            'is_active' => 'boolean',
+            'parent_id' => 'sometimes|nullable|exists:contents,id',
+            'level' => 'sometimes|nullable|integer|min:0',
+            'order' => 'sometimes|nullable|integer|min:0'
         ]);
 
         $content->update($validated);
-        return $content;
+        return response()->json([
+            'status' => true,
+            'message' => 'Content updated successfully',
+            'data' => $content
+        ], 200);
     }
 
     /**
+     * Remove the specified resource from storage.
+     * 
      * @group Content Management
      * @subgroup Delete Operations
-     * Remove the specified resource from storage.
      */
     public function destroy(Content $content)
     {

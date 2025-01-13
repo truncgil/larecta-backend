@@ -9,18 +9,20 @@ use App\Models\Permission;
 use Illuminate\Http\Request;
 
 /**
+ * This controller handles the CRUD operations for the Permission model.
  * @group Permission Management
  * @subgroup Permission Controller
- * This controller handles the CRUD operations for the Permission model.
+ * 
  */
 class PermissionController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
 
     /**
+     * Display a listing of the resource.
+     * 
      * @group Permission Management
      * @subgroup Listing Operations
-     * Display a listing of all permissions.
      */
     public function index()
     {
@@ -28,9 +30,10 @@ class PermissionController extends Controller
     }
 
     /**
+     * Store a newly created resource in storage.
+     * 
      * @group Permission Management
      * @subgroup Create Operations
-     * Create a new permission.
      */
     public function store(Request $request)
     {
@@ -44,9 +47,10 @@ class PermissionController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     * 
      * @group Permission Management
      * @subgroup View Operations
-     * Display the specified permission.
      */
     public function show(Permission $permission)
     {
@@ -54,9 +58,10 @@ class PermissionController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     * 
      * @group Permission Management
      * @subgroup Update Operations
-     * Update the specified permission.
      */
     public function update(Request $request, Permission $permission)
     {
@@ -70,13 +75,14 @@ class PermissionController extends Controller
     }
 
     /**
+     * Remove the specified resource from storage.
+     * 
      * @group Permission Management
      * @subgroup Delete Operations
-     * Remove the specified permission.
      */
     public function destroy(Permission $permission)
     {
         $permission->delete();
         return response()->json(null, 204);
     }
-} 
+}
