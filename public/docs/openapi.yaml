@@ -7,6 +7,79 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/auth/register:
+    post:
+      summary: 'Creates a new user registration.'
+      operationId: createsANewUserRegistration
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: "User's full name. Maximum: 255 characters."
+                  example: in
+                  nullable: false
+                email:
+                  type: string
+                  description: "User's email address. Maximum: 255 characters, must be unique."
+                  example: ureinger@example.org
+                  nullable: false
+                password:
+                  type: string
+                  description: "User's password. Minimum: 6 characters."
+                  example: wU.Yn0g!H
+                  nullable: false
+              required:
+                - name
+                - email
+                - password
+  /api/auth/login:
+    post:
+      summary: 'Authenticates user and creates token.'
+      operationId: authenticatesUserAndCreatesToken
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: tturcotte@example.com
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: quia
+                  nullable: false
+              required:
+                - email
+                - password
+  /api/auth/logout:
+    post:
+      summary: 'Logs out the user and deletes all tokens.'
+      operationId: logsOutTheUserAndDeletesAllTokens
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
   /api/auth/user:
     get:
       summary: 'Get user information.'
@@ -60,15 +133,200 @@ paths:
                         example: '2024-01-15T10:00:00.000000Z'
       tags:
         - Authentication
-  /api/auth/register:
-    post:
-      summary: 'Creates a new user registration.'
-      operationId: createsANewUserRegistration
+  /api/auth/profile:
+    put:
+      summary: 'Updates user profile information.'
+      operationId: updatesUserProfileInformation
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Authentication
+  /api/admin/contents:
+    get:
+      summary: ''
+      operationId: getApiAdminContents
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Content Management'
+    post:
+      summary: ''
+      operationId: postApiAdminContents
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Content Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: kgsuyxss
+                  nullable: false
+                body:
+                  type: string
+                  description: ''
+                  example: non
+                  nullable: false
+                slug:
+                  type: string
+                  description: ''
+                  example: saepe
+                  nullable: false
+                type:
+                  type: string
+                  description: ''
+                  example: officia
+                  nullable: true
+                status:
+                  type: string
+                  description: ''
+                  example: draft
+                  nullable: false
+                  enum:
+                    - draft
+                    - published
+                    - archived
+                content:
+                  type: string
+                  description: ''
+                  example: minima
+                  nullable: true
+                meta:
+                  type: string
+                  description: 'Must be a valid JSON string.'
+                  example: '["ipsum","aspernatur"]'
+                  nullable: true
+              required:
+                - title
+                - body
+                - slug
+                - status
+  '/api/admin/contents/{content_id}':
+    get:
+      summary: ''
+      operationId: getApiAdminContentsContent_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Content Management'
+    put:
+      summary: ''
+      operationId: putApiAdminContentsContent_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Content Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqcbq
+                  nullable: false
+                body:
+                  type: string
+                  description: ''
+                  example: non
+                  nullable: false
+                slug:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: false
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: false
+              required:
+                - title
+                - body
+    delete:
+      summary: ''
+      operationId: deleteApiAdminContentsContent_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Content Management'
+    parameters:
+      -
+        in: path
+        name: content_id
+        description: 'The ID of the content.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+  /api/permissions:
+    get:
+      summary: ''
+      operationId: getApiPermissions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Permission Management'
+    post:
+      summary: ''
+      operationId: postApiPermissions
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Permission Management'
       requestBody:
         required: true
         content:
@@ -78,70 +336,79 @@ paths:
               properties:
                 name:
                   type: string
-                  description: "User's full name. Maximum: 255 characters."
-                  example: ea
+                  description: ''
+                  example: architecto
                   nullable: false
-                email:
+                description:
                   type: string
-                  description: "User's email address. Maximum: 255 characters, must be unique."
-                  example: morris.beatty@example.net
-                  nullable: false
-                password:
-                  type: string
-                  description: "User's password. Minimum: 6 characters."
-                  example: 'Z~+i9!%{hx)p}g`'
-                  nullable: false
+                  description: ''
+                  example: 'Quod praesentium sit qui cumque.'
+                  nullable: true
               required:
                 - name
-                - email
-                - password
-  /api/auth/login:
-    post:
-      summary: 'Authenticates user and creates token.'
-      operationId: authenticatesUserAndCreatesToken
+  '/api/permissions/{permission_id}':
+    get:
+      summary: ''
+      operationId: getApiPermissionsPermission_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Permission Management'
+    put:
+      summary: ''
+      operationId: putApiPermissionsPermission_id
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Permission Management'
       requestBody:
-        required: true
+        required: false
         content:
           application/json:
             schema:
               type: object
               properties:
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: cgreen@example.com
-                  nullable: false
-                password:
+                name:
                   type: string
                   description: ''
-                  example: cumque
+                  example: null
                   nullable: false
-              required:
-                - email
-                - password
-  /api/auth/logout:
-    post:
-      summary: 'Logs out the user and deletes all tokens.'
-      operationId: logsOutTheUserAndDeletesAllTokens
+                description:
+                  type: string
+                  description: ''
+                  example: 'Aut doloremque assumenda ea velit et.'
+                  nullable: true
+    delete:
+      summary: ''
+      operationId: deleteApiPermissionsPermission_id
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
-  /api/auth/profile:
-    put:
-      summary: 'Updates user profile information.'
-      operationId: updatesUserProfileInformation
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
+        - 'Permission Management'
+    parameters:
+      -
+        in: path
+        name: permission_id
+        description: 'The ID of the permission.'
+        example: 2
+        required: true
+        schema:
+          type: integer
   /api/roles:
     get:
       summary: ''
@@ -162,7 +429,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Role Management'
     post:
       summary: ''
       operationId: postApiRoles
@@ -170,7 +437,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Role Management'
       requestBody:
         required: true
         content:
@@ -181,12 +448,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: a
+                  example: iusto
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Deleniti adipisci veritatis consectetur numquam qui voluptates non.'
+                  example: 'Qui labore voluptates aut sapiente quis explicabo.'
                   nullable: true
                 permissions:
                   type: array
@@ -216,7 +483,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Role Management'
     put:
       summary: ''
       operationId: putApiRolesRole_id
@@ -224,7 +491,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Role Management'
       requestBody:
         required: false
         content:
@@ -240,7 +507,7 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Quibusdam tempora eius quibusdam earum.'
+                  example: 'Quis quo laudantium adipisci ut.'
                   nullable: true
                 permissions:
                   type: array
@@ -255,331 +522,13 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Role Management'
     parameters:
       -
         in: path
         name: role_id
         description: 'The ID of the role.'
         example: 1
-        required: true
-        schema:
-          type: integer
-  /api/permissions:
-    get:
-      summary: ''
-      operationId: getApiPermissions
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-    post:
-      summary: ''
-      operationId: postApiPermissions
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: quo
-                  nullable: false
-                description:
-                  type: string
-                  description: ''
-                  example: 'In iste molestiae vero assumenda tempore amet.'
-                  nullable: true
-              required:
-                - name
-  '/api/permissions/{permission_id}':
-    get:
-      summary: ''
-      operationId: getApiPermissionsPermission_id
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-    put:
-      summary: ''
-      operationId: putApiPermissionsPermission_id
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: null
-                  nullable: false
-                description:
-                  type: string
-                  description: ''
-                  example: 'Veritatis accusamus est sed.'
-                  nullable: true
-    delete:
-      summary: ''
-      operationId: deleteApiPermissionsPermission_id
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-    parameters:
-      -
-        in: path
-        name: permission_id
-        description: 'The ID of the permission.'
-        example: 2
-        required: true
-        schema:
-          type: integer
-  /api/users:
-    get:
-      summary: ''
-      operationId: getApiUsers
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-  '/api/users/{user_id}':
-    get:
-      summary: ''
-      operationId: getApiUsersUser_id
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-    parameters:
-      -
-        in: path
-        name: user_id
-        description: 'The ID of the user.'
-        example: 2
-        required: true
-        schema:
-          type: integer
-  /api/admin/contents:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: zftjxcrxbjxvfhmldm
-                  nullable: false
-                body:
-                  type: string
-                  description: ''
-                  example: accusantium
-                  nullable: false
-                slug:
-                  type: string
-                  description: ''
-                  example: mollitia
-                  nullable: false
-                type:
-                  type: string
-                  description: ''
-                  example: in
-                  nullable: true
-                status:
-                  type: string
-                  description: ''
-                  example: published
-                  nullable: false
-                  enum:
-                    - draft
-                    - published
-                    - archived
-                content:
-                  type: string
-                  description: ''
-                  example: repellendus
-                  nullable: true
-                meta:
-                  type: string
-                  description: 'Must be a valid JSON string.'
-                  example: '["aliquam","ut"]'
-                  nullable: true
-              required:
-                - title
-                - body
-                - slug
-                - status
-  '/api/admin/contents/{content_id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: lzvdrbliwlpdctmzcr
-                  nullable: false
-                body:
-                  type: string
-                  description: ''
-                  example: voluptatem
-                  nullable: false
-                slug:
-                  type: string
-                  description: ''
-                  example: null
-                  nullable: false
-                is_active:
-                  type: boolean
-                  description: ''
-                  example: false
-                  nullable: false
-              required:
-                - title
-                - body
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-    parameters:
-      -
-        in: path
-        name: content_id
-        description: 'The ID of the content.'
-        example: 2
         required: true
         schema:
           type: integer
@@ -603,7 +552,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Type Management'
     post:
       summary: ''
       operationId: postApiAdminTypes
@@ -611,7 +560,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
       requestBody:
         required: true
         content:
@@ -622,12 +571,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zbj
+                  example: hemisopstzrx
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptas non quisquam sunt laborum molestiae.'
+                  example: 'Repellendus iste perspiciatis eligendi nostrum.'
                   nullable: true
               required:
                 - name
@@ -651,7 +600,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Type Management'
     put:
       summary: ''
       operationId: putApiAdminTypesType_id
@@ -659,7 +608,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
       requestBody:
         required: true
         content:
@@ -670,12 +619,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mdyloyyulbzql
+                  example: ypgqncunfuwctesn
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Placeat eos tempore quis modi eos.'
+                  example: 'Quaerat et rerum eligendi facilis.'
                   nullable: true
               required:
                 - name
@@ -686,7 +635,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
     parameters:
       -
         in: path
@@ -716,7 +665,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Type Management'
     post:
       summary: ''
       operationId: postApiAdminTypesTypeMetas
@@ -724,7 +673,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
       requestBody:
         required: true
         content:
@@ -735,12 +684,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bacesadtcgsjtgence
+                  example: lk
                   nullable: false
                 field_type:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wuuej
+                  example: gpieqjjpsotrfvd
                   nullable: false
               required:
                 - name
@@ -774,7 +723,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Type Management'
     put:
       summary: ''
       operationId: putApiAdminTypesTypeMetasMeta
@@ -782,7 +731,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
       requestBody:
         required: true
         content:
@@ -793,12 +742,12 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jpvjabsrmsafjlxgkq
+                  example: ms
                   nullable: false
                 field_type:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kfmltajiutnpchjxtwkb
+                  example: hoszdvpjtvwjpegmltskcgjfj
                   nullable: false
               required:
                 - name
@@ -810,7 +759,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Type Management'
     parameters:
       -
         in: path
@@ -824,16 +773,79 @@ paths:
         in: path
         name: meta
         description: 'The meta.'
-        example: autem
+        example: beatae
         required: true
         schema:
           type: string
+  /api/users:
+    get:
+      summary: 'Display a listing of user roles'
+      operationId: displayAListingOfUserRoles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User Management'
+  '/api/users/{user_id}':
+    get:
+      summary: 'Display the specified user role'
+      operationId: displayTheSpecifiedUserRole
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User Management'
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 2
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Authentication
     description: ''
   -
-    name: Endpoints
+    name: 'Content Management'
+    description: ''
+  -
+    name: 'Permission Management'
+    description: ''
+  -
+    name: 'Role Management'
+    description: ''
+  -
+    name: 'Type Management'
+    description: ''
+  -
+    name: 'User Management'
     description: ''
 components:
   securitySchemes:

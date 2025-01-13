@@ -391,3 +391,9 @@ body {
     padding-right: 0.5em;
     font-size: 14px
 }
+
+.logo {
+    padding: 10px;
+    padding-left: 14px;
+    width: calc(100% - 20px);
+}

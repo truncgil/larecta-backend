@@ -1,16 +1,18 @@
-name: Authentication
+name: 'Role Management'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/auth/user
+    uri: api/roles
     metadata:
-      groupName: Authentication
+      groupName: 'Role Management'
       groupDescription: ''
-      subgroup: ''
+      subgroup: |-
+        Listing Operations
+        Display a listing of all roles with their associated permissions.
       subgroupDescription: ''
-      title: 'Get user information.'
+      title: ''
       description: ''
       authenticated: true
       custom: []
@@ -27,28 +29,268 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: |-
-          {
-            "status": true,
-            "message": "User information retrieved successfully",
-            "data": {
-              "id": 1,
-              "name": "John Doe",
-              "email": "john@example.com",
-              "email_verified_at": "2024-01-15T10:00:00.000000Z",
-              "created_at": "2024-01-15T10:00:00.000000Z",
-              "updated_at": "2024-01-15T10:00:00.000000Z"
-            }
-          }
-        headers: []
-        description: ''
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
         custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer k6acbDE6gh53eaPv14fZV8d'
+      - 'Bearer eafdgZ6aE6k5c1v38hDbPV4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/roles
+    metadata:
+      groupName: 'Role Management'
+      groupDescription: ''
+      subgroup: |-
+        Create Operations
+        Create a new role with optional permissions.
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: iusto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Qui labore voluptates aut sapiente quis explicabo.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      permissions:
+        name: permissions
+        description: 'The <code>id</code> of an existing record in the permissions table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: iusto
+      description: 'Qui labore voluptates aut sapiente quis explicabo.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer dZ5eVv6ahf1P3D6acb4E8gk'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/roles/{role_id}'
+    metadata:
+      groupName: 'Role Management'
+      groupDescription: ''
+      subgroup: |-
+        View Operations  
+        Display the specified role with its permissions.
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      role_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer hPEb8caV1gkvd63efZa546D'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/roles/{role_id}'
+    metadata:
+      groupName: 'Role Management'
+      groupDescription: ''
+      subgroup: |-
+        Update Operations
+        Update the specified role and its permissions.
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      role_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Quis quo laudantium adipisci ut.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      permissions:
+        name: permissions
+        description: 'The <code>id</code> of an existing record in the permissions table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      description: 'Quis quo laudantium adipisci ut.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 68VZ3vEab4e6dakPhg51cDf'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/roles/{role_id}'
+    metadata:
+      groupName: 'Role Management'
+      groupDescription: ''
+      subgroup: |-
+        Delete Operations
+        Remove the specified role and detach all its permissions.
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      role_id:
+        name: role_id
+        description: 'The ID of the role.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      role_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6Ec43vPa158badVeDk6hfgZ'
     controller: null
     method: null
     route: null

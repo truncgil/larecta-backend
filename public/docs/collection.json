@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Larecta CMS API Documentation",
-        "_postman_id": "e2192249-c45f-498e-bdbb-5c0e31841ecf",
+        "_postman_id": "69a3aa4f-83b8-4079-88fa-afddb0df535e",
         "description": "Larecta CMS is a modern API system developed for content management. It includes core CMS functionalities such as user management, authorization, content creation and editing. The API provides a secure and efficient way to manage your content.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,1255 +20,1435 @@
             "description": "",
             "item": [
                 {
-                    "name": "Get user information.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Registration",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\n  \"status\": true,\n  \"message\": \"User information retrieved successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"email_verified_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"created_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"updated_at\": \"2024-01-15T10:00:00.000000Z\"\n  }\n}",
-                            "name": ""
+                            "name": "Creates a new user registration.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/register",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/auth\/register"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"in\",\"email\":\"ureinger@example.org\",\"password\":\"wU.Yn0g!H\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Login",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Authenticates user and creates token.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/login",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/auth\/login"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"email\":\"tturcotte@example.com\",\"password\":\"quia\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Logs out the user and deletes all tokens.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/logout",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/auth\/logout"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "User Profile",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Get user information.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/user",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/auth\/user"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\n  \"status\": true,\n  \"message\": \"User information retrieved successfully\",\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"email_verified_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"created_at\": \"2024-01-15T10:00:00.000000Z\",\n    \"updated_at\": \"2024-01-15T10:00:00.000000Z\"\n  }\n}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Updates user profile information.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/profile",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/auth\/profile"
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "Endpoints",
+            "name": "Content Management",
             "description": "",
             "item": [
                 {
-                    "name": "Creates a new user registration.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/register",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/register"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"ea\",\"email\":\"morris.beatty@example.net\",\"password\":\"Z~+i9!%{hx)p}g`\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Authenticates user and creates token.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"cgreen@example.com\",\"password\":\"cumque\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Logs out the user and deletes all tokens.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/logout",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/logout"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Updates user profile information.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/auth\/profile",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/auth\/profile"
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/roles",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Listing Operations\nDisplay a listing of the resource.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "GET api\/admin\/contents",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/contents",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/contents"
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "POST api\/roles",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"a\",\"description\":\"Deleniti adipisci veritatis consectetur numquam qui voluptates non.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/roles\/{role_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "1",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Create Operations\nStore a newly created resource in storage.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "POST api\/admin\/contents",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/contents",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/contents"
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"title\":\"kgsuyxss\",\"body\":\"non\",\"slug\":\"saepe\",\"type\":\"officia\",\"status\":\"draft\",\"content\":\"minima\",\"meta\":\"[\\\"ipsum\\\",\\\"aspernatur\\\"]\"}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "PUT api\/roles\/{role_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "1",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"description\":\"Quibusdam tempora eius quibusdam earum.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "DELETE api\/roles\/{role_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/roles\/:role_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/roles\/:role_id",
-                            "variable": [
-                                {
-                                    "id": "role_id",
-                                    "key": "role_id",
-                                    "value": "1",
-                                    "description": "The ID of the role."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/permissions",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/permissions",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/permissions"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "View Operations\nDisplay the specified resource.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "GET api\/admin\/contents\/{content_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/contents\/:content_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
+                                    "variable": [
+                                        {
+                                            "id": "content_id",
+                                            "key": "content_id",
+                                            "value": "2",
+                                            "description": "The ID of the content."
+                                        }
+                                    ]
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "POST api\/permissions",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/permissions",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/permissions"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"quo\",\"description\":\"In iste molestiae vero assumenda tempore amet.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/permissions\/{permission_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/permissions\/:permission_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
-                            "variable": [
-                                {
-                                    "id": "permission_id",
-                                    "key": "permission_id",
-                                    "value": "2",
-                                    "description": "The ID of the permission."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Update Operations\nUpdate the specified resource in storage.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "PUT api\/admin\/contents\/{content_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/contents\/:content_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
+                                    "variable": [
+                                        {
+                                            "id": "content_id",
+                                            "key": "content_id",
+                                            "value": "2",
+                                            "description": "The ID of the content."
+                                        }
+                                    ]
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"title\":\"mqcbq\",\"body\":\"non\",\"is_active\":true}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "PUT api\/permissions\/{permission_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/permissions\/:permission_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
-                            "variable": [
-                                {
-                                    "id": "permission_id",
-                                    "key": "permission_id",
-                                    "value": "2",
-                                    "description": "The ID of the permission."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"description\":\"Veritatis accusamus est sed.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "DELETE api\/permissions\/{permission_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/permissions\/:permission_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
-                            "variable": [
-                                {
-                                    "id": "permission_id",
-                                    "key": "permission_id",
-                                    "value": "2",
-                                    "description": "The ID of the permission."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Delete Operations\nRemove the specified resource from storage.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "DELETE api\/admin\/contents\/{content_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/contents\/:content_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
+                                    "variable": [
+                                        {
+                                            "id": "content_id",
+                                            "key": "content_id",
+                                            "value": "2",
+                                            "description": "The ID of the content."
+                                        }
+                                    ]
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Permission Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Listing Operations\nDisplay a listing of all permissions.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/permissions",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/permissions",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/permissions"
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "GET api\/users\/{user_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/users\/:user_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/users\/:user_id",
-                            "variable": [
-                                {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "2",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Create Operations\nCreate a new permission.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "POST api\/permissions",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/permissions",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/permissions"
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"architecto\",\"description\":\"Quod praesentium sit qui cumque.\"}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/contents",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/contents"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "View Operations\nDisplay the specified permission.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "GET api\/permissions\/{permission_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/permissions\/:permission_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                                    "variable": [
+                                        {
+                                            "id": "permission_id",
+                                            "key": "permission_id",
+                                            "value": "2",
+                                            "description": "The ID of the permission."
+                                        }
+                                    ]
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/contents",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/contents"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"title\":\"zftjxcrxbjxvfhmldm\",\"body\":\"accusantium\",\"slug\":\"mollitia\",\"type\":\"in\",\"status\":\"published\",\"content\":\"repellendus\",\"meta\":\"[\\\"aliquam\\\",\\\"ut\\\"]\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/contents\/:content_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
-                            "variable": [
-                                {
-                                    "id": "content_id",
-                                    "key": "content_id",
-                                    "value": "2",
-                                    "description": "The ID of the content."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Update Operations\nUpdate the specified permission.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "PUT api\/permissions\/{permission_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/permissions\/:permission_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                                    "variable": [
+                                        {
+                                            "id": "permission_id",
+                                            "key": "permission_id",
+                                            "value": "2",
+                                            "description": "The ID of the permission."
+                                        }
+                                    ]
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"description\":\"Aut doloremque assumenda ea velit et.\"}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/contents\/:content_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
-                            "variable": [
-                                {
-                                    "id": "content_id",
-                                    "key": "content_id",
-                                    "value": "2",
-                                    "description": "The ID of the content."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"title\":\"lzvdrbliwlpdctmzcr\",\"body\":\"voluptatem\",\"is_active\":false}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/contents\/:content_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/contents\/:content_id",
-                            "variable": [
-                                {
-                                    "id": "content_id",
-                                    "key": "content_id",
-                                    "value": "2",
-                                    "description": "The ID of the content."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/admin\/types",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Delete Operations\nRemove the specified permission.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "DELETE api\/permissions\/{permission_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/permissions\/:permission_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/permissions\/:permission_id",
+                                    "variable": [
+                                        {
+                                            "id": "permission_id",
+                                            "key": "permission_id",
+                                            "value": "2",
+                                            "description": "The ID of the permission."
+                                        }
+                                    ]
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Role Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Listing Operations\nDisplay a listing of all roles with their associated permissions.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/roles",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/roles",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/roles"
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "POST api\/admin\/types",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"zbj\",\"description\":\"Voluptas non quisquam sunt laborum molestiae.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/admin\/types\/{type_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
-                            "variable": [
-                                {
-                                    "id": "type_id",
-                                    "key": "type_id",
-                                    "value": "2",
-                                    "description": "The ID of the type."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Create Operations\nCreate a new role with optional permissions.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "POST api\/roles",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/roles",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/roles"
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"iusto\",\"description\":\"Qui labore voluptates aut sapiente quis explicabo.\"}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "PUT api\/admin\/types\/{type_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
-                            "variable": [
-                                {
-                                    "id": "type_id",
-                                    "key": "type_id",
-                                    "value": "2",
-                                    "description": "The ID of the type."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"mdyloyyulbzql\",\"description\":\"Placeat eos tempore quis modi eos.\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "DELETE api\/admin\/types\/{type_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
-                            "variable": [
-                                {
-                                    "id": "type_id",
-                                    "key": "type_id",
-                                    "value": "2",
-                                    "description": "The ID of the type."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/admin\/types\/{type}\/metas",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type\/metas",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
-                            "variable": [
-                                {
-                                    "id": "type",
-                                    "key": "type",
-                                    "value": "2",
-                                    "description": "The type."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "View Operations  \nDisplay the specified role with its permissions.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "GET api\/roles\/{role_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/roles\/:role_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                                    "variable": [
+                                        {
+                                            "id": "role_id",
+                                            "key": "role_id",
+                                            "value": "1",
+                                            "description": "The ID of the role."
+                                        }
+                                    ]
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "POST api\/admin\/types\/{type}\/metas",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type\/metas",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
-                            "variable": [
-                                {
-                                    "id": "type",
-                                    "key": "type",
-                                    "value": "2",
-                                    "description": "The type."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"bacesadtcgsjtgence\",\"field_type\":\"wuuej\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/admin\/types\/{type}\/metas\/{meta}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type\/metas\/:meta",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
-                            "variable": [
-                                {
-                                    "id": "type",
-                                    "key": "type",
-                                    "value": "2",
-                                    "description": "The type."
-                                },
-                                {
-                                    "id": "meta",
-                                    "key": "meta",
-                                    "value": "autem",
-                                    "description": "The meta."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
+                    "name": "Update Operations\nUpdate the specified role and its permissions.",
+                    "description": "",
+                    "item": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                            "name": "PUT api\/roles\/{role_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/roles\/:role_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                                    "variable": [
+                                        {
+                                            "id": "role_id",
+                                            "key": "role_id",
+                                            "value": "1",
+                                            "description": "The ID of the role."
+                                        }
+                                    ]
                                 },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"description\":\"Quis quo laudantium adipisci ut.\"}"
                                 },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 },
                 {
-                    "name": "PUT api\/admin\/types\/{type}\/metas\/{meta}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type\/metas\/:meta",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
-                            "variable": [
-                                {
-                                    "id": "type",
-                                    "key": "type",
-                                    "value": "2",
-                                    "description": "The type."
+                    "name": "Delete Operations\nRemove the specified role and detach all its permissions.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "DELETE api\/roles\/{role_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/roles\/:role_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/roles\/:role_id",
+                                    "variable": [
+                                        {
+                                            "id": "role_id",
+                                            "key": "role_id",
+                                            "value": "1",
+                                            "description": "The ID of the role."
+                                        }
+                                    ]
                                 },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Type Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Type Controller\nThis controller handles the CRUD operations for the Type model.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/admin\/types",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "id": "meta",
-                                    "key": "meta",
-                                    "value": "omnis",
-                                    "description": "The meta."
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
                             ]
                         },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
+                        {
+                            "name": "POST api\/admin\/types",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"hemisopstzrx\",\"description\":\"Repellendus iste perspiciatis eligendi nostrum.\"}"
+                                },
+                                "description": ""
                             },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"jpvjabsrmsafjlxgkq\",\"field_type\":\"kfmltajiutnpchjxtwkb\"}"
+                            "response": []
                         },
-                        "description": ""
-                    },
-                    "response": []
+                        {
+                            "name": "GET api\/admin\/types\/{type_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                                    "variable": [
+                                        {
+                                            "id": "type_id",
+                                            "key": "type_id",
+                                            "value": "2",
+                                            "description": "The ID of the type."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PUT api\/admin\/types\/{type_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                                    "variable": [
+                                        {
+                                            "id": "type_id",
+                                            "key": "type_id",
+                                            "value": "2",
+                                            "description": "The ID of the type."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"ypgqncunfuwctesn\",\"description\":\"Quaerat et rerum eligendi facilis.\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "DELETE api\/admin\/types\/{type_id}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type_id",
+                                    "variable": [
+                                        {
+                                            "id": "type_id",
+                                            "key": "type_id",
+                                            "value": "2",
+                                            "description": "The ID of the type."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
                 },
                 {
-                    "name": "DELETE api\/admin\/types\/{type}\/metas\/{meta}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admin\/types\/:type\/metas\/:meta",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
-                            "variable": [
-                                {
-                                    "id": "type",
-                                    "key": "type",
-                                    "value": "2",
-                                    "description": "The type."
+                    "name": "Listing Operations\nGet all meta fields for a type.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/admin\/types\/{type}\/metas",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type\/metas",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "2",
+                                            "description": "The type."
+                                        }
+                                    ]
                                 },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
                                 {
-                                    "id": "meta",
-                                    "key": "meta",
-                                    "value": "consectetur",
-                                    "description": "The meta."
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Form Operations\nStore a new meta field for a type.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST api\/admin\/types\/{type}\/metas",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type\/metas",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "2",
+                                            "description": "The type."
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"lk\",\"field_type\":\"gpieqjjpsotrfvd\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "View Operations\nDisplay the specified meta field.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "GET api\/admin\/types\/{type}\/metas\/{meta}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type\/metas\/:meta",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "2",
+                                            "description": "The type."
+                                        },
+                                        {
+                                            "id": "meta",
+                                            "key": "meta",
+                                            "value": "beatae",
+                                            "description": "The meta."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Operations\nUpdate the specified meta field.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "PUT api\/admin\/types\/{type}\/metas\/{meta}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type\/metas\/:meta",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "2",
+                                            "description": "The type."
+                                        },
+                                        {
+                                            "id": "meta",
+                                            "key": "meta",
+                                            "value": "optio",
+                                            "description": "The meta."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"ms\",\"field_type\":\"hoszdvpjtvwjpegmltskcgjfj\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Operations\nRemove the specified meta field.",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "DELETE api\/admin\/types\/{type}\/metas\/{meta}",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/admin\/types\/:type\/metas\/:meta",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/admin\/types\/:type\/metas\/:meta",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "2",
+                                            "description": "The type."
+                                        },
+                                        {
+                                            "id": "meta",
+                                            "key": "meta",
+                                            "value": "magnam",
+                                            "description": "The meta."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "User Roles",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "Display a listing of user roles",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
                                 }
                             ]
                         },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
+                        {
+                            "name": "Display the specified user role",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:user_id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:user_id",
+                                    "variable": [
+                                        {
+                                            "id": "user_id",
+                                            "key": "user_id",
+                                            "value": "2",
+                                            "description": "The ID of the user."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
                             },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": []
+                            "response": [
+                                {
+                                    "header": [
+                                        {
+                                            "key": "cache-control",
+                                            "value": "no-cache, private"
+                                        },
+                                        {
+                                            "key": "content-type",
+                                            "value": "application\/json"
+                                        },
+                                        {
+                                            "key": "vary",
+                                            "value": "Origin"
+                                        }
+                                    ],
+                                    "code": 401,
+                                    "body": "{\"message\":\"Unauthenticated.\"}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
