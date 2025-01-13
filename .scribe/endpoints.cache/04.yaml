@@ -10,11 +10,9 @@ endpoints:
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
-      subgroup: |-
-        Listing Operations
-        Display a listing of the resource.
+      subgroup: 'Listing Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: true
       custom: []
@@ -43,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bgkV1ha64efZvP8aED356dc'
+      - 'Bearer 15DEPhb6kd38acvZg6f4eaV'
     controller: null
     method: null
     route: null
@@ -55,11 +53,9 @@ endpoints:
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
-      subgroup: |-
-        Create Operations
-        Store a newly created resource in storage.
+      subgroup: 'Create Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -76,7 +72,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: uciv
+        example: chnouruh
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +82,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: delectus
+        example: itaque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +92,7 @@ endpoints:
         name: slug
         description: ''
         required: true
-        example: blanditiis
+        example: minus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,7 +102,7 @@ endpoints:
         name: type
         description: ''
         required: false
-        example: illo
+        example: nulla
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -129,7 +125,7 @@ endpoints:
         name: content
         description: ''
         required: false
-        example: sit
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -139,27 +135,59 @@ endpoints:
         name: meta
         description: 'Must be a valid JSON string.'
         required: false
-        example: '["quia","necessitatibus"]'
+        example: '["dolorem","aut"]'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
+      parent_id:
+        name: parent_id
+        description: 'The <code>id</code> of an existing record in the contents table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      level:
+        name: level
+        description: 'Must be at least 0.'
+        required: false
+        example: 64
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      order:
+        name: order
+        description: 'Must be at least 0.'
+        required: false
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
-      title: uciv
-      body: delectus
-      slug: blanditiis
-      type: illo
+      title: chnouruh
+      body: itaque
+      slug: minus
+      type: nulla
       status: archived
-      content: sit
-      meta: '["quia","necessitatibus"]'
+      content: dolorem
+      meta: '["dolorem","aut"]'
+      level: 64
+      order: 3
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer eZV8vhfkPa4616ad5DE3bcg'
+      - 'Bearer Zk1aVab8vhedD46f3PcgE65'
     controller: null
     method: null
     route: null
@@ -171,11 +199,9 @@ endpoints:
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
-      subgroup: |-
-        View Operations
-        Display the specified resource.
+      subgroup: 'View Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -188,14 +214,14 @@ endpoints:
         name: content
         description: 'The content.'
         required: true
-        example: sunt
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      content: sunt
+      content: qui
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -215,7 +241,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Vaedg81656vZhbf43kPacDE'
+      - 'Bearer ha661egEdD4fZkv3P8aVc5b'
     controller: null
     method: null
     route: null
@@ -227,11 +253,9 @@ endpoints:
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
-      subgroup: |-
-        Update Operations
-        Update the specified resource in storage.
+      subgroup: 'Update Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -259,7 +283,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: myqhzppfcrgezkowbdnphzngs
+        example: igh
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -269,7 +293,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: quo
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -295,17 +319,49 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      parent_id:
+        name: parent_id
+        description: 'The <code>id</code> of an existing record in the contents table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      level:
+        name: level
+        description: 'Must be at least 0.'
+        required: false
+        example: 85
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      order:
+        name: order
+        description: 'Must be at least 0.'
+        required: false
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
-      title: myqhzppfcrgezkowbdnphzngs
-      body: quo
+      title: igh
+      body: sit
       is_active: false
+      level: 85
+      order: 13
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 6a5D4kc6gvPae8ZdEV3bf1h'
+      - 'Bearer 41DgE3akfZdhvV85bP6ac6e'
     controller: null
     method: null
     route: null
@@ -317,11 +373,9 @@ endpoints:
     metadata:
       groupName: 'Content Management'
       groupDescription: ''
-      subgroup: |-
-        Delete Operations
-        Remove the specified resource from storage.
+      subgroup: 'Delete Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: true
       custom: []
@@ -352,7 +406,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer caV4eaPgEDZd5kbh61v6f38'
+      - 'Bearer DgveaVcZ568fk4ha16bEd3P'
     controller: null
     method: null
     route: null

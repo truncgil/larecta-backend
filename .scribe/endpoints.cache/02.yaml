@@ -10,11 +10,9 @@ endpoints:
     metadata:
       groupName: 'Permission Management'
       groupDescription: ''
-      subgroup: |-
-        Listing Operations
-        Display a listing of all permissions.
+      subgroup: 'Listing Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: true
       custom: []
@@ -43,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bZ6gde8V5fPk6a43vaEDhc1'
+      - 'Bearer EPdZcb6vakf3hVga58D6e14'
     controller: null
     method: null
     route: null
@@ -55,11 +53,9 @@ endpoints:
     metadata:
       groupName: 'Permission Management'
       groupDescription: ''
-      subgroup: |-
-        Create Operations
-        Create a new permission.
+      subgroup: 'Create Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -76,7 +72,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: aut
+        example: nostrum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,22 +82,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Sint cumque similique voluptatum dolorem rerum facere.'
+        example: 'Fugiat consequatur quisquam recusandae molestias.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: aut
-      description: 'Sint cumque similique voluptatum dolorem rerum facere.'
+      name: nostrum
+      description: 'Fugiat consequatur quisquam recusandae molestias.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer g8hb36ac4Eed5aDv1P6ZfVk'
+      - 'Bearer 6aVve4gbZcEaD8P13k5dfh6'
     controller: null
     method: null
     route: null
@@ -113,11 +109,9 @@ endpoints:
     metadata:
       groupName: 'Permission Management'
       groupDescription: ''
-      subgroup: |-
-        View Operations
-        Display the specified permission.
+      subgroup: 'View Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -157,7 +151,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PEavDg54d1hecaZ3kfV68b6'
+      - 'Bearer ca3bEg6D5eVkZ16hP4vd8af'
     controller: null
     method: null
     route: null
@@ -169,11 +163,9 @@ endpoints:
     metadata:
       groupName: 'Permission Management'
       groupDescription: ''
-      subgroup: |-
-        Update Operations
-        Update the specified permission.
+      subgroup: 'Update Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -211,21 +203,21 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Omnis explicabo nulla atque nihil quia cumque.'
+        example: 'Nihil officiis recusandae pariatur possimus tenetur.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      description: 'Omnis explicabo nulla atque nihil quia cumque.'
+      description: 'Nihil officiis recusandae pariatur possimus tenetur.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 3eP18VfcDhZ4dEaa566vbkg'
+      - 'Bearer PEae41Dk3Zhcag866fV5vdb'
     controller: null
     method: null
     route: null
@@ -237,11 +229,9 @@ endpoints:
     metadata:
       groupName: 'Permission Management'
       groupDescription: ''
-      subgroup: |-
-        Delete Operations
-        Remove the specified permission.
+      subgroup: 'Delete Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: true
       custom: []
@@ -272,7 +262,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer deZ5Ea64h1cba68kgfVP3vD'
+      - 'Bearer fZDeg6dEabaP4h5V61cv3k8'
     controller: null
     method: null
     route: null

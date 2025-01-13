@@ -10,11 +10,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Type Controller
-        This controller handles the CRUD operations for the Type model.
+      subgroup: 'Listing Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: true
       custom: []
@@ -43,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fE4a6De1hPbcZ5a8vkV6g3d'
+      - 'Bearer kEcv5VDgd36fP84aaZ6h1be'
     controller: null
     method: null
     route: null
@@ -55,11 +53,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Type Controller
-        This controller handles the CRUD operations for the Type model.
+      subgroup: 'Create Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -76,7 +72,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ot
+        example: jeofytrxubbyiw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,22 +82,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Beatae rerum sint quod tempore et optio.'
+        example: 'Non amet voluptatem distinctio mollitia id repudiandae minus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: ot
-      description: 'Beatae rerum sint quod tempore et optio.'
+      name: jeofytrxubbyiw
+      description: 'Non amet voluptatem distinctio mollitia id repudiandae minus.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer E6DZPka1bvfVgh5d8a4e63c'
+      - 'Bearer egkEa1b8dD3Z6fV65hPav4c'
     controller: null
     method: null
     route: null
@@ -113,11 +109,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Type Controller
-        This controller handles the CRUD operations for the Type model.
+      subgroup: 'View Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -157,7 +151,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer de16vfVahkaDEPc4g856b3Z'
+      - 'Bearer aedEk636Z4ghPv8aD5cVf1b'
     controller: null
     method: null
     route: null
@@ -169,11 +163,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Type Controller
-        This controller handles the CRUD operations for the Type model.
+      subgroup: 'Update Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: true
       custom: []
@@ -201,7 +193,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: mvgrmaruszxsdv
+        example: py
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -211,22 +203,22 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Esse officiis ea laborum voluptatem possimus impedit.'
+        example: 'Cumque inventore possimus est facere vel.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: mvgrmaruszxsdv
-      description: 'Esse officiis ea laborum voluptatem possimus impedit.'
+      name: py
+      description: 'Cumque inventore possimus est facere vel.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 56vPhZa68aEck4gd3ef1DbV'
+      - 'Bearer 3af5Dbagd66kZ4vc1VEhe8P'
     controller: null
     method: null
     route: null
@@ -238,11 +230,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Type Controller
-        This controller handles the CRUD operations for the Type model.
+      subgroup: 'Delete Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: true
       custom: []
@@ -273,7 +263,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 48kg6aabfdVve1EZh6D3cP5'
+      - 'Bearer fP468D3gaavdZEkVbceh156'
     controller: null
     method: null
     route: null
@@ -285,11 +275,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Listing Operations
-        Get all meta fields for a type.
+      subgroup: 'Listing Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Get all meta fields for a type.'
       description: ''
       authenticated: true
       custom: []
@@ -329,7 +317,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aE34fkcVaeDg8615dvhb6ZP'
+      - 'Bearer 3VfDaPbvkEdgZa6ec41865h'
     controller: null
     method: null
     route: null
@@ -341,11 +329,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Form Operations
-        Store a new meta field for a type.
+      subgroup: 'Form Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Store a new meta field for a type.'
       description: ''
       authenticated: true
       custom: []
@@ -373,7 +359,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: reknx
+        example: rgmblqnxncmxnzc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -383,22 +369,22 @@ endpoints:
         name: field_type
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gxvgxqvgcoukrbx
+        example: isodmwraa
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: reknx
-      field_type: gxvgxqvgcoukrbx
+      name: rgmblqnxncmxnzc
+      field_type: isodmwraa
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 3D61PakVdZc4v5Eagfhb86e'
+      - 'Bearer DPVaeZd3bva5Ec614fkhg86'
     controller: null
     method: null
     route: null
@@ -410,11 +396,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        View Operations
-        Display the specified meta field.
+      subgroup: 'View Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Display the specified meta field.'
       description: ''
       authenticated: true
       custom: []
@@ -437,7 +421,7 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: aut
+        example: nobis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -445,7 +429,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       type: 3
-      meta: aut
+      meta: nobis
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -465,7 +449,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer agkebZf65Vc36avE4d1DhP8'
+      - 'Bearer Z4ah66bf8cdvD51aVPgekE3'
     controller: null
     method: null
     route: null
@@ -477,11 +461,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Update Operations
-        Update the specified meta field.
+      subgroup: 'Update Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Update the specified meta field.'
       description: ''
       authenticated: true
       custom: []
@@ -504,7 +486,7 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: repudiandae
+        example: saepe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -512,7 +494,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       type: 3
-      meta: repudiandae
+      meta: saepe
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -520,7 +502,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gcxsetidlihedtakyklykwdl
+        example: eejqxuswzix
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -530,22 +512,22 @@ endpoints:
         name: field_type
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: miclvcdrntqoxzdohlq
+        example: kgalxpaezegqkedqvqyndgpc
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: gcxsetidlihedtakyklykwdl
-      field_type: miclvcdrntqoxzdohlq
+      name: eejqxuswzix
+      field_type: kgalxpaezegqkedqvqyndgpc
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer ev4baDP5163hk8gcaEdZV6f'
+      - 'Bearer vV6kaPgbDEf4hcd56aZ38e1'
     controller: null
     method: null
     route: null
@@ -557,11 +539,9 @@ endpoints:
     metadata:
       groupName: 'Type Management'
       groupDescription: ''
-      subgroup: |-
-        Delete Operations
-        Remove the specified meta field.
+      subgroup: 'Delete Operations'
       subgroupDescription: ''
-      title: ''
+      title: 'Remove the specified meta field.'
       description: ''
       authenticated: true
       custom: []
@@ -584,7 +564,7 @@ endpoints:
         name: meta
         description: 'The meta.'
         required: true
-        example: id
+        example: aliquid
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -592,7 +572,7 @@ endpoints:
         custom: []
     cleanUrlParameters:
       type: 3
-      meta: id
+      meta: aliquid
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -603,7 +583,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1vD6kPa5chbaVd4f6eEZ8g3'
+      - 'Bearer hcdga3Ea6Vkf6Z8P1D4bv5e'
     controller: null
     method: null
     route: null

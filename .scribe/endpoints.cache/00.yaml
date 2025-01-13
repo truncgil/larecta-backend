@@ -29,7 +29,7 @@ endpoints:
         name: name
         description: "User's full name. Maximum: 255 characters."
         required: true
-        example: illo
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -39,7 +39,7 @@ endpoints:
         name: email
         description: "User's email address. Maximum: 255 characters, must be unique."
         required: true
-        example: reichel.lambert@example.org
+        example: kristian.bednar@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -49,23 +49,23 @@ endpoints:
         name: password
         description: "User's password. Minimum: 6 characters."
         required: true
-        example: 'U;Kj?uN~_-;owB`kDu.Z'
+        example: '6?27Kyj(t5..'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: illo
-      email: reichel.lambert@example.org
-      password: 'U;Kj?uN~_-;owB`kDu.Z'
+      name: consequatur
+      email: kristian.bednar@example.net
+      password: '6?27Kyj(t5..'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer c3e6k6dEDvfaZ58b4PgVha1'
+      - 'Bearer cbPeE8vaZ15hgd4VafDk636'
     controller: null
     method: null
     route: null
@@ -96,7 +96,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: leora.gaylord@example.net
+        example: adickinson@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,22 +106,22 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: cumque
+        example: commodi
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: leora.gaylord@example.net
-      password: cumque
+      email: adickinson@example.net
+      password: commodi
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer fa368kaEb4PhZVvc1dDg6e5'
+      - 'Bearer E1edbaf4gc3PDVhv5k6a8Z6'
     controller: null
     method: null
     route: null
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fg6Z51k3cPvdeahba86E4VD'
+      - 'Bearer h4d3g6aacbZP1eVEfv8k6D5'
     controller: null
     method: null
     route: null
@@ -207,7 +207,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Pk48fdc3hVbD6eEZ615agav'
+      - 'Bearer vafaZD6he583kc61Pbdg4VE'
     controller: null
     method: null
     route: null
@@ -238,7 +238,7 @@ endpoints:
         name: name
         description: 'optional Kullanıcının tam adı. Maximum: 255 karakter.'
         required: false
-        example: culpa
+        example: itaque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -248,7 +248,7 @@ endpoints:
         name: email
         description: 'optional Kullanıcının email adresi. Maximum: 255 karakter, benzersiz olmalı.'
         required: false
-        example: adriel.schulist@example.com
+        example: geoffrey.cartwright@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -258,7 +258,7 @@ endpoints:
         name: password
         description: 'optional Yeni şifre. Minimum: 8 karakter.'
         required: false
-        example: 'Waf;9*XSU0+{OvlxW'
+        example: '3co=;M=yg]4}L~Nxr?'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -268,17 +268,17 @@ endpoints:
         name: password_confirmation
         description: 'optional Şifre onayı. password ile eşleşmeli.'
         required: false
-        example: minus
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: culpa
-      email: adriel.schulist@example.com
-      password: 'Waf;9*XSU0+{OvlxW'
-      password_confirmation: minus
+      name: itaque
+      email: geoffrey.cartwright@example.org
+      password: '3co=;M=yg]4}L~Nxr?'
+      password_confirmation: tempore
     fileParameters: []
     responses:
       -
@@ -315,7 +315,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a8Z341hfePa6dVc5g6bEkDv'
+      - 'Bearer aDV4kZ1PEga5c6h3fdv86eb'
     controller: null
     method: null
     route: null

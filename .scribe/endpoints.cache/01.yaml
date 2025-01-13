@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3bk8DPh5V61g4Ea6daceZvf'
+      - 'Bearer k4d6EVPcD3ah8g6ve51Zfba'
     controller: null
     method: null
     route: null
@@ -76,7 +76,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: architecto
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +86,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Cupiditate corrupti commodi delectus quis.'
+        example: 'Voluptatem quam vero similique hic eaque qui non.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,15 +103,15 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: architecto
-      description: 'Cupiditate corrupti commodi delectus quis.'
+      name: nesciunt
+      description: 'Voluptatem quam vero similique hic eaque qui non.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 863VEh6vbdDP5gceaaZ1fk4'
+      - 'Bearer a8f35ZhPD4akVbdgv6eE61c'
     controller: null
     method: null
     route: null
@@ -167,7 +167,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E64bdZDegaav3h65fckPV81'
+      - 'Bearer hv4k3gbd6fc5DZ8E6aaPe1V'
     controller: null
     method: null
     route: null
@@ -221,7 +221,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Molestiae beatae ut accusantium asperiores numquam.'
+        example: 'Et nisi vel nihil tempore adipisci.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,14 +238,14 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      description: 'Molestiae beatae ut accusantium asperiores numquam.'
+      description: 'Et nisi vel nihil tempore adipisci.'
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8E3f156a4VvehdgbcaZkP6D'
+      - 'Bearer Pfa8ec65g4Zd31bV6vhkaED'
     controller: null
     method: null
     route: null
@@ -292,7 +292,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Vakhd54bE8P6f1Z6Dce3avg'
+      - 'Bearer bVek83DcE4d66aah1g5PZvf'
     controller: null
     method: null
     route: null
