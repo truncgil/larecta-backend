@@ -83,8 +83,8 @@ Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
     // Type Metas rotaları
     Route::get('/types/{type}/metas', [TypeMetaController::class, 'index']);
     Route::post('/types/{type}/metas', [TypeMetaController::class, 'store']);
-    Route::get('/types/{type}/metas/{meta}', [TypeMetaController::class, 'show']);
-    Route::put('/types/{type}/metas/{meta}', [TypeMetaController::class, 'update']);
-    Route::delete('/types/{type}/metas/{meta}', [TypeMetaController::class, 'destroy']);
+    Route::get('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'show']);
+    Route::put('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'update']);
+    Route::delete('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'destroy']);
 });
 

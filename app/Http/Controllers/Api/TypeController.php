@@ -22,7 +22,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
+        $types = Type::orderBy('order', 'asc')->get();
         return response()->json($types);
     }
 
@@ -66,13 +66,16 @@ class TypeController extends Controller
     public function update(Request $request, Type $type)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'sometimes|required|string|max:255',
             'description' => 'nullable|string',
+            'icon' => 'sometimes|nullable|string',
+            'order' => 'sometimes|integer',
+            'status' => 'sometimes|in:active,inactive,pending'
         ]);
 
-        $type->update($request->all());
+        $type->update($request->only(['name', 'description', 'icon', 'order', 'status']));
         return response()->json([
-            'message' => 'Type updated successfully',
+            'message' => 'Type başarıyla güncellendi',
             'data' => $type
         ]);
     }

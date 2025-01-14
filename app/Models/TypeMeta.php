@@ -11,10 +11,20 @@ class TypeMeta extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['type_id', 'name', 'field_type'];
+    protected $fillable = ['type_id', 'name', 'field_type', 'order'];
 
     public function type()
     {   
         return $this->belongsTo(Type::class);
     }
+
+    /**
+     * Route model binding için anahtar tanımı
+     * Bu, URL'den gelen parametrelerin doğru şekilde eşleşmesini sağlar
+     */
+    public function getRouteKeyName()
+    {
+        return 'id';
+    }
+
 }

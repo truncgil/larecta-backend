@@ -50,8 +50,9 @@ class TypeMetaController extends Controller
     public function store(Request $request, $typeId)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'field_type' => 'required|string|max:255',
+            'name' => 'sometimes|string|max:255',
+            'field_type' => 'sometimes|string|max:255',
+            'order' => 'sometimes|integer',
         ]);
 
         $type = Type::findOrFail($typeId);
@@ -95,15 +96,18 @@ class TypeMetaController extends Controller
     public function update(Request $request, $typeId, TypeMeta $typeMeta)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'field_type' => 'required|string|max:255',
+            'name' => 'sometimes|string|max:255',
+            'field_type' => 'sometimes|string|max:255',
+            'order' => 'sometimes|integer',
         ]);
 
-        $typeMeta->update($request->all());
 
+     
+        $result = $typeMeta->update($request->all());
+        
         return response()->json([
             'message' => 'Meta field updated successfully',
-            'meta' => $typeMeta
+            'metas' => $typeMeta
         ]);
     }
 
