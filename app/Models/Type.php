@@ -9,7 +9,7 @@ class Type extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'icon', 'order', 'status',];
+    protected $fillable = ['name', 'description', 'icon', 'order', 'status', 'slug'];
 
     public function metas()
     {

@@ -47,6 +47,7 @@ class TypeController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255|unique:types,slug',
             'description' => 'nullable|string',
         ]);
 
@@ -67,6 +68,7 @@ class TypeController extends Controller
     {
         $request->validate([
             'name' => 'sometimes|required|string|max:255',
+            'slug' => 'sometimes|required|string|max:255|unique:types,slug',
             'description' => 'nullable|string',
             'icon' => 'sometimes|nullable|string',
             'order' => 'sometimes|integer',
