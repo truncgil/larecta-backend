@@ -22,7 +22,7 @@ class TypeMetaController extends Controller
     public function index($typeId)
     {
         $type = Type::findOrFail($typeId);
-        $metas = $type->metas;
+        $metas = $type->metas()->orderBy('order', 'asc')->get();
         return response()->json([
             'type' => $type,
             'metas' => $metas
