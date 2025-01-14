@@ -80,11 +80,16 @@ Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
     Route::put('/types/{type}', [TypeController::class, 'update']);
     Route::delete('/types/{type}', [TypeController::class, 'destroy']);
     
-    // Type Metas rotaları
-    Route::get('/types/{type}/metas', [TypeMetaController::class, 'index']);
-    Route::post('/types/{type}/metas', [TypeMetaController::class, 'store']);
-    Route::get('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'show']);
-    Route::put('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'update']);
-    Route::delete('/types/{type}/metas/{typeMeta}', [TypeMetaController::class, 'destroy']);
+    // Type Meta'lar için CRUD işlemleri
+    Route::prefix('types/{type}/metas')
+        ->controller(TypeMetaController::class)
+        ->group(function () {
+            Route::get('/', 'index');          // Tüm meta alanlarını listele
+            Route::post('/', 'store');         // Yeni meta alanı oluştur
+            Route::get('/{typeMeta}', 'show'); // Belirli bir meta alanını göster
+            Route::put('/{typeMeta}', 'update'); // Meta alanını güncelle  
+            Route::delete('/{typeMeta}', 'destroy'); // Meta alanını sil
+        });
+    
 });
 
