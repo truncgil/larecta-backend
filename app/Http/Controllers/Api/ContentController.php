@@ -95,6 +95,8 @@ class ContentController extends Controller
     {
         $validated = $request->validate([
             'title' => 'sometimes|required|max:255',
+            'type' => 'sometimes|required|max:255',
+            'content' => 'sometimes|required',
             'body' => 'sometimes|required',
             'slug' => 'sometimes|required|unique:contents,slug,' . $content->id,
             'is_active' => 'boolean',
@@ -132,5 +134,24 @@ class ContentController extends Controller
                 'error' => $e->getMessage()
             ], 500);
         }
+    }
+
+    /**
+     * Get contents by specific type
+     * 
+     * @group Content Management
+     * @subgroup Listing Operations
+     * @param string $type Content type
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getContentsByType($type)
+    {
+        $contents = Content::where('type', $type)->get();
+        
+        return response()->json([
+            'status' => true,
+            'message' => 'Contents retrieved successfully',
+            'data' => $contents
+        ]);
     }
 }

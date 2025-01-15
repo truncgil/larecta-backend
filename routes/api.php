@@ -67,14 +67,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
 // Contents, Types ve TypeMetas için API endpoint'leri
 Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
     // Contents rotaları
-    Route::resource('contents', ContentController::class)->only([
-        'index', 'store', 'show', 'update', 'destroy'
-    ]);
+    Route::resource('contents', ContentController::class);
+
+    Route::get('contents/type/{type}', [ContentController::class, 'getContentsByType']);
+
+
     
     // Types rotaları
-    Route::resource('types', TypeController::class)->only([
-        'index', 'store', 'show', 'update', 'destroy'
-    ]);
+    Route::resource('types', TypeController::class);
     
     // Type Meta'lar için CRUD işlemleri
     Route::prefix('types/{type}')
