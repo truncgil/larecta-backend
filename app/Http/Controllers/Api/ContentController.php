@@ -41,7 +41,6 @@ class ContentController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|max:255',
-            'body' => 'required',
             'slug' => 'required|unique:contents',
             'type' => 'nullable|string',
             'status' => 'required|in:draft,published,archived',
@@ -96,11 +95,10 @@ class ContentController extends Controller
         $validated = $request->validate([
             'title' => 'sometimes|required|max:255',
             'type' => 'sometimes|required|max:255',
-            'content' => 'sometimes|required',
-            'body' => 'sometimes|required',
+            'content' => 'nullable|string',
             'slug' => 'sometimes|required|unique:contents,slug,' . $content->id,
-            'is_active' => 'boolean',
             'parent_id' => 'sometimes|nullable|exists:contents,id',
+            'status' => 'sometimes|required|in:draft,published,archived',
             'level' => 'sometimes|nullable|integer|min:0',
             'order' => 'sometimes|nullable|integer|min:0'
         ]);
