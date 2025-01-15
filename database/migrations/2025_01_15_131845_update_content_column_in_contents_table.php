@@ -15,7 +15,7 @@ class UpdateContentColumnInContentsTable extends Migration
     {
         Schema::table('contents', function (Blueprint $table) {
             // 'content' sütununu LONGTEXT olarak değiştir
-            $table->longText('content')->change();
+            $table->longText('content')->nullable()->change();
         });
     }
 
