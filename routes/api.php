@@ -67,29 +67,21 @@ Route::middleware(['auth:sanctum'])->group(function () {
 // Contents, Types ve TypeMetas için API endpoint'leri
 Route::middleware(['auth:sanctum'])->prefix('admin')->group(function () {
     // Contents rotaları
-    Route::get('/contents', [ContentController::class, 'index']);
-    Route::post('/contents', [ContentController::class, 'store']);
-    Route::get('/contents/{content}', [ContentController::class, 'show']);
-    Route::put('/contents/{content}', [ContentController::class, 'update']);
-    Route::delete('/contents/{content}', [ContentController::class, 'destroy']);
+    Route::resource('contents', ContentController::class)->only([
+        'index', 'store', 'show', 'update', 'destroy'
+    ]);
     
     // Types rotaları
-    Route::get('/types', [TypeController::class, 'index']);
-    Route::post('/types', [TypeController::class, 'store']);
-    Route::get('/types/{type}', [TypeController::class, 'show']);
-    Route::put('/types/{type}', [TypeController::class, 'update']);
-    Route::delete('/types/{type}', [TypeController::class, 'destroy']);
+    Route::resource('types', TypeController::class)->only([
+        'index', 'store', 'show', 'update', 'destroy'
+    ]);
     
     // Type Meta'lar için CRUD işlemleri
-    Route::prefix('types/{type}/metas')
-        ->controller(TypeMetaController::class)
-        ->group(function () {
-            Route::get('/', 'index');          // Tüm meta alanlarını listele
-            Route::post('/', 'store');         // Yeni meta alanı oluştur
-            Route::get('/{typeMeta}', 'show'); // Belirli bir meta alanını göster
-            Route::put('/{typeMeta}', 'update'); // Meta alanını güncelle  
-            Route::delete('/{typeMeta}', 'destroy'); // Meta alanını sil
-        });
+    Route::prefix('types/{type}')
+    ->group(function () {
+        Route::resource('metas', TypeMetaController::class)
+            ->parameters(['metas' => 'typeMeta']);
+    });
     
 });
 
