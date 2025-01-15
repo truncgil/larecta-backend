@@ -48,7 +48,11 @@ class TypeController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:types,slug',
+            'icon' => 'nullable|string',
             'description' => 'nullable|string',
+            'order' => 'nullable|integer',
+            'status' => 'nullable|in:active,inactive,pending'
+            
         ]);
 
         $type = Type::create($request->all());
@@ -75,7 +79,7 @@ class TypeController extends Controller
             'status' => 'sometimes|in:active,inactive,pending'
         ]);
 
-        $type->update($request->only(['name', 'description', 'icon', 'order', 'status']));
+        $type->update($request->all());
         return response()->json([
             'message' => 'Type başarıyla güncellendi',
             'data' => $type
