@@ -32,8 +32,12 @@ class TypeController extends Controller
      * @group Type Management  
      * @subgroup View Operations
      */
-    public function show(Type $type)
+    public function show($identifier)
     {
+        $type = Type::where('id', $identifier)
+            ->orWhere('slug', $identifier)
+            ->firstOrFail();
+            
         return response()->json($type);
     }
 
