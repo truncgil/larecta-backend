@@ -7,7 +7,7 @@ class VerifyCsrfToken extends Middleware
 {
     protected $except = [
         'api/*',
-        'telescope/api/*',
+        'telescope/telescope-api/*',
     ];
 }
  ?>

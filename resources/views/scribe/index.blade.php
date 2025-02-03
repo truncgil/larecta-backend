@@ -1,29 +1,34 @@
+<!-- See https://github.com/stoplightio/elements/blob/main/docs/getting-started/elements/elements-options.md for config -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Larecta CMS API Documentation</title>
-    <meta charset="utf-8"/>
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"/>
+    <!-- Embed elements Elements via Web Component -->
+    <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css">
     <style>
         body {
-            margin: 0;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
 
-<script
-    id="api-reference"
+<elements-api
     
     hideSchemas="true"
     
     tryItCredentialsPolicy="same-origin"
     
     router="history"
-    data-url="{{ route("scribe.openapi") }}">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+    apiDescriptionUrl="{{ route("scribe.openapi") }}"
+    router="hash"
+    layout="sidebar"
+    hideTryIt=""
+    logo="logo.svg"
+/>
+
 </body>
 </html>
