@@ -1,13 +1,13 @@
 services:
   app:
     build: .
-    container_name: laravel_app
+    container_name: larecta_app
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
       - ./docker/supervisor:/etc/supervisor/conf.d
     networks:
-      - laravel
+      - larecta
     depends_on:
       - db
       - redis
@@ -15,7 +15,7 @@ services:
 
   web:
     image: nginx:latest
-    container_name: laravel_nginx
+    container_name: larecta_nginx
     ports:
       - "8000:80"
     volumes:
@@ -25,32 +25,32 @@ services:
       - app
     networks:
 
-      - laravel
+      - larecta
 
   db:
     image: mysql:8
-    container_name: laravel_mysql
+    container_name: larecta_mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
+      MYSQL_DATABASE: larecta
+      MYSQL_USER: larecta
       MYSQL_PASSWORD: secret
     volumes:
       - dbdata:/var/lib/mysql
     networks:
-      - laravel
+      - larecta
 
   redis:
     image: redis:alpine
-    container_name: laravel_redis
+    container_name: larecta_redis
     restart: always
     networks:
-      - laravel
+      - larecta
 
   vite:
     image: node:18-alpine
-    container_name: laravel_vite
+    container_name: larecta_vite
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
@@ -58,11 +58,11 @@ services:
     ports:
       - "5173:5173"
     networks:
-      - laravel
+      - larecta
 
 volumes:
   dbdata:
 
 networks:
-  laravel:
+  larecta:
     driver: bridge

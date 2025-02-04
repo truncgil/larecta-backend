@@ -123,13 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'providers' => [
-        // Diğer provider'lar...
-        
-        Laravel\Ui\UiServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Filesystem\FilesystemServiceProvider::class,
-        
-    ],
+   
 
 ];
