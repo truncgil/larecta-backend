@@ -1,0 +1,7 @@
+node_modules/
+.git/
+docker-compose.yml
+.dockerignore
+.env
+vendor/
+public/storage 

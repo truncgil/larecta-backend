@@ -1,0 +1,26 @@
+npm install -D tailwindcss postcss autoprefixer vite laravel-vite-plugin
+npx tailwindcss init -p 
+docker-compose down --volumes
+docker-compose build --no-cache
+docker-compose up -d
+docker-compose exec app node -v
+docker-compose exec app npm -v 
+docker-compose exec app npm run dev
+# Veya production için
+docker-compose exec app npm run build 
+
+# Dosya izinlerini sıfırla
+sudo chmod -R 755 .
+sudo chown -R $USER:$USER .
+
+# Docker sistemini temizle
+docker system prune -a --volumes 
+
+docker-compose exec app composer require laravel/ui "^2.0" --dev
+docker-compose exec app php artisan ui bootstrap --auth 
+
+docker-compose exec app npm install
+docker-compose exec app npm run dev 
+
+docker-compose down
+docker-compose up -d 
