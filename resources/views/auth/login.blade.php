@@ -1,4 +1,3 @@
-<x-guest-layout>
     <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500">
         <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
             <div class="mb-10 text-center">
@@ -27,4 +26,3 @@
             </form>
         </div>
     </div>
-</x-guest-layout>
