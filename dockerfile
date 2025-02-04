@@ -32,6 +32,12 @@ COPY . /var/www
 # Set permissions
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
+#COPY ./docker/supervisor /etc/supervisor/conf.d/
+
+
 # Expose port
-EXPOSE 8000
+EXPOSE 8082
+
+
+#CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
