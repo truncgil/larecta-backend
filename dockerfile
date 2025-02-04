@@ -2,7 +2,7 @@
 FROM php:8.2-fpm
 
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -27,10 +27,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs
 
 # Copy Laravel project
-COPY . /var/www/html
+COPY . /var/www
 
 # Set permissions
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Expose port
 EXPOSE 8000

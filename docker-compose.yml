@@ -2,12 +2,12 @@ services:
   app:
     build: .
     container_name: larecta_app
-    working_dir: /var/www/html
+    working_dir: /var/www
     volumes:
-      - .:/var/www/html
+      - .:/var/www/
       - ./docker/supervisor:/etc/supervisor/conf.d
     networks:
-      - larecta
+      - larecta_network
     depends_on:
       - db
       - redis
@@ -19,13 +19,12 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - .:/var/www/html
+      - .:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - app
     networks:
-
-      - larecta
+      - larecta_network
 
   db:
     image: mysql:8
@@ -35,34 +34,34 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: larecta
       MYSQL_USER: larecta
-      MYSQL_PASSWORD: secret
+      MYSQL_PASSWORD: larecta
     volumes:
       - dbdata:/var/lib/mysql
     networks:
-      - larecta
+      - larecta_network
 
   redis:
     image: redis:alpine
     container_name: larecta_redis
     restart: always
     networks:
-      - larecta
+      - larecta_network
 
   vite:
     image: node:18-alpine
     container_name: larecta_vite
-    working_dir: /var/www/html
+    working_dir: /var/www
     volumes:
-      - .:/var/www/html
+      - .:/var/www
     command: ["sh", "-c", "npm install && npm run dev"]
     ports:
       - "5173:5173"
     networks:
-      - larecta
+      - larecta_network
 
 volumes:
   dbdata:
 
 networks:
-  larecta:
+  larecta_network:
     driver: bridge
