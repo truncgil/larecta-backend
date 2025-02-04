@@ -125,7 +125,11 @@ return [
 
     'providers' => [
         // Diğer provider'lar...
+        
         Laravel\Ui\UiServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        
     ],
 
 ];

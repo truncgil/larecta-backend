@@ -1,10 +1,4 @@
 <?php
-// CORS başlıklarını ayarlama
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-
-
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
