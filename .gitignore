@@ -23,4 +23,8 @@ yarn-error.log
 /.zed
 public/docs
 .scribe/
-storage
+/storage/*.key
+/storage/logs
+/storage/framework/*
+/bootstrap/cache/*
+!bootstrap/cache/.gitignore
