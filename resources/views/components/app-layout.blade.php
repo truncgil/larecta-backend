@@ -31,7 +31,6 @@
         [x-cloak] { display: none !important; }
         body { font-family: 'Inter', sans-serif; }
     </style>
-    @livewireStyles
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <div class="min-h-screen">
@@ -85,6 +84,5 @@
     </div>
 
     @stack('modals')
-    @livewireScripts
 </body>
 </html> 

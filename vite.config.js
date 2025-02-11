@@ -22,7 +22,8 @@ export default defineConfig({
                 'resources/js/app.js',
             ],
             refresh: true,
-            publicDirectory: 'public'
+            publicDirectory: 'public',
+            buildDirectory: 'build'
         }),
     ],
     build: {
@@ -39,7 +40,9 @@ export default defineConfig({
                     return 'assets/[name].[ext]';
                 }
             }
-        },
-        chunkSizeWarningLimit: 1600
+        }
+    },
+    optimizeDeps: {
+        include: ['alpinejs']
     }
 });
