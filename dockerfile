@@ -16,8 +16,9 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip \
     supervisor \
+    && pecl install redis \
     && docker-php-ext-install pdo_mysql zip gd opcache \
-    && docker-php-ext-enable opcache
+    && docker-php-ext-enable opcache redis
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer

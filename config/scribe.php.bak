@@ -44,10 +44,10 @@ return [
     // - "laravel" will generate the documentation as a Blade view, so you can add routing and authentication.
     // - "external_static" and "external_laravel" do the same as above, but generate a basic template,
     // passing the OpenAPI spec as a URL, allowing you to easily use the docs with an external generator
-    'type' => 'static',
+    'type' => 'external_laravel',
 
     // See https://scribe.knuckles.wtf/laravel/reference/config#theme for supported options
-    'theme' => 'default',
+    'theme' => 'elements',
 
     'static' => [
         // HTML documentation, assets and Postman collection will be generated to this folder.
@@ -71,10 +71,16 @@ return [
 
         // Middleware to attach to the docs endpoint (if `add_routes` is true).
         'middleware' => [],
+
+        'storage_path' => storage_path('app/private/scribe'),
     ],
 
     'external' => [
-        'html_attributes' => []
+        'html_attributes' => [
+            'hideSchemas' => 'true', # Note: values should be strings, not booleans
+            'tryItCredentialsPolicy' => 'same-origin',
+            'router' => 'history'
+        ]
     ],
 
     'try_it_out' => [
@@ -104,7 +110,7 @@ return [
 
         // Where is the auth value meant to be sent in a request?
         // Options: query, body, basic, bearer, header (for custom header)
-        'in' => 'header',
+        'in' => 'bearer',
 
         // The name of the auth parameter (e.g. token, key, apiKey) or header (e.g. Authorization, Api-Key).
         'name' => 'Authorization',
@@ -115,8 +121,7 @@ return [
 
         // Placeholder your users will see for the auth parameter in the example requests.
         // Set this to null if you want Scribe to use a random value as placeholder instead.
-        'placeholder' => 'Bearer {YOUR_AUTH_KEY}',
-        'value' => 'Bearer {{auth_token}}',
+        'placeholder' => '{YOUR_AUTH_KEY}',
 
         // Any extra authentication-related info for your users. Markdown and HTML are supported.
         'extra_info' => 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.',
@@ -137,6 +142,9 @@ INTRO
     'example_languages' => [
         'bash',
         'javascript',
+        'php',
+        'python',
+       
     ],
 
     // Generate a Postman collection (v2.1.0) in addition to HTML docs.
